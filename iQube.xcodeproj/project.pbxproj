@@ -1,0 +1,725 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53266AE523F02A6F00D94079 /* SpecialistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53266AE423F02A6F00D94079 /* SpecialistModel.swift */; };
+		53266AE723F02C1400D94079 /* SubscribePupupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53266AE623F02C1400D94079 /* SubscribePupupVC.swift */; };
+		53963B7F2413D83600B21925 /* WorkspaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53963B7E2413D83600B21925 /* WorkspaceViewController.swift */; };
+		53963B812413D93300B21925 /* WorkspaceDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53963B802413D93300B21925 /* WorkspaceDataSource.swift */; };
+		53963B852413E21900B21925 /* WorkspaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53963B842413E21900B21925 /* WorkspaceCell.swift */; };
+		53963B872413E24900B21925 /* WorkspaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53963B862413E24900B21925 /* WorkspaceCell.xib */; };
+		53A2CA4B2413B003002F7DCD /* ApplicationInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A2CA4A2413B003002F7DCD /* ApplicationInfoModel.swift */; };
+		53A2CA4D2413BD9A002F7DCD /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A2CA4C2413BD9A002F7DCD /* GreetingViewController.swift */; };
+		53A2CA4F2413CA81002F7DCD /* CongratulateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A2CA4E2413CA81002F7DCD /* CongratulateViewController.swift */; };
+		53A2CA512413CC57002F7DCD /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A2CA502413CC57002F7DCD /* BaseModel.swift */; };
+		53B8C987240C154700808AA8 /* SignUpNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B8C986240C154700808AA8 /* SignUpNameViewController.swift */; };
+		53B8C989240C183800808AA8 /* SignUpPhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B8C988240C183800808AA8 /* SignUpPhoneViewController.swift */; };
+		53C57B0C245EC4C3007ABFC9 /* ButtonsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C57B0B245EC4C3007ABFC9 /* ButtonsViewController.swift */; };
+		53C57B0F245ECBDD007ABFC9 /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C57B0E245ECBDD007ABFC9 /* UIView+Anchor.swift */; };
+		53E57B43240BF38500620BB1 /* AppIDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E57B42240BF38500620BB1 /* AppIDController.swift */; };
+		53E57B45240BF57900620BB1 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E57B44240BF57900620BB1 /* DesignableUITextField.swift */; };
+		6C76EBF0ACA5923C2A3C8CB8 /* Pods_iQube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0126A1E2557F5A68F6885CBC /* Pods_iQube.framework */; };
+		F518ACBB2269B0F600E12E0A /* GiftPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F518ACBA2269B0F600E12E0A /* GiftPopupVC.swift */; };
+		F518ACBD2269B55700E12E0A /* OfferPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F518ACBC2269B55600E12E0A /* OfferPopupVC.swift */; };
+		F518ACBF2269EEED00E12E0A /* PricePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F518ACBE2269EEED00E12E0A /* PricePopupVC.swift */; };
+		F51B4F5022E70C040098EC91 /* ARKitVC+Nodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B4F4F22E70C040098EC91 /* ARKitVC+Nodes.swift */; };
+		F51B4F5222E70DA70098EC91 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51B4F5122E70DA70098EC91 /* ImageService.swift */; };
+		F51D4168232D1BFF003D29AB /* QubeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51D4167232D1BFF003D29AB /* QubeTextField.swift */; };
+		F532F16C22FC6C4800E7B565 /* ARKitVC+PopoverButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532F16B22FC6C4800E7B565 /* ARKitVC+PopoverButton.swift */; };
+		F53BF7D023A16B870062D5A7 /* WorkspaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53BF7CF23A16B870062D5A7 /* WorkspaceModel.swift */; };
+		F53FF27722E8A6B300210FE8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53FF27622E8A6B300210FE8 /* UserModel.swift */; };
+		F542182E2301901300766A7A /* FeedbackItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F542182D2301901300766A7A /* FeedbackItemModel.swift */; };
+		F54919E222EEDBF400674688 /* BasePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54919E122EEDBF400674688 /* BasePopupVC.swift */; };
+		F54D01F022FC357A009C64EE /* PopoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54D01EE22FC357A009C64EE /* PopoverCell.swift */; };
+		F54D01F122FC357A009C64EE /* PopoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54D01EF22FC357A009C64EE /* PopoverCell.xib */; };
+		F5599EFC22E9862A0026F15E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5599EFB22E9862A0026F15E /* BaseViewController.swift */; };
+		F5599F0322E9AAF00026F15E /* SMSCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5599F0222E9AAF00026F15E /* SMSCodeViewController.swift */; };
+		F560331322EAE49600812376 /* StoryboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F560331222EAE49600812376 /* StoryboardVC.swift */; };
+		F56154A222DCAF2800AF1DE9 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56154A122DCAF2800AF1DE9 /* ButtonView.swift */; };
+		F57E4DFA22D71E5400B2E92D /* YoutubeDirectLinkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57E4DF922D71E5400B2E92D /* YoutubeDirectLinkService.swift */; };
+		F57E4DFD22D73A7500B2E92D /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F57E4DFC22D73A7500B2E92D /* Helper.swift */; };
+		F589A47722E9E5D100E7E888 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F589A47622E9E5D100E7E888 /* UserManager.swift */; };
+		F589FCEF22F1BB7900ECC119 /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F589FCEE22F1BB7900ECC119 /* HUDView.swift */; };
+		F5A0488322E5E28E00DB7E1B /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A0488222E5E28E00DB7E1B /* ItemModel.swift */; };
+		F5A0488522E5E46A00DB7E1B /* ButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A0488422E5E46A00DB7E1B /* ButtonModel.swift */; };
+		F5A0E7AE22F3206E00C3E9EE /* ThanksPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A0E7AD22F3206E00C3E9EE /* ThanksPopupVC.swift */; };
+		F5AB159D22D4954B00BCEA4C /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AB159C22D4954B00BCEA4C /* ImageModel.swift */; };
+		F5AB159F22D4C74C00BCEA4C /* ApiConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AB159E22D4C74C00BCEA4C /* ApiConfig.swift */; };
+		F5AB15A122D4D9CE00BCEA4C /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AB15A022D4D9CE00BCEA4C /* ApiManager.swift */; };
+		F5AFC44F22FB004F004845A4 /* PopoverTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AFC44E22FB004F004845A4 /* PopoverTableView.swift */; };
+		F5B3CF6A22CF79C4006F244A /* ARKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B3CF6922CF79C4006F244A /* ARKitService.swift */; };
+		F5B3CF7022CF9C1A006F244A /* ARKitVC+Popups.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B3CF6F22CF9C1A006F244A /* ARKitVC+Popups.swift */; };
+		F5F525B92268AE10006FCC84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F525B82268AE10006FCC84 /* AppDelegate.swift */; };
+		F5F525BB2268AE10006FCC84 /* StartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F525BA2268AE10006FCC84 /* StartVC.swift */; };
+		F5F525BE2268AE10006FCC84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F525BC2268AE10006FCC84 /* Main.storyboard */; };
+		F5F525C02268AE12006FCC84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5F525BF2268AE12006FCC84 /* Assets.xcassets */; };
+		F5F525C32268AE12006FCC84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5F525C12268AE12006FCC84 /* LaunchScreen.storyboard */; };
+		F5F525CB2268B025006FCC84 /* ARKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F525CA2268B025006FCC84 /* ARKitVC.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0126A1E2557F5A68F6885CBC /* Pods_iQube.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iQube.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B3B031A508C48F82CE29B6F /* Pods-iQube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iQube.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iQube/Pods-iQube.debug.xcconfig"; sourceTree = "<group>"; };
+		4674242E4A32E8928318E467 /* Pods-ARKitDemoProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitDemoProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARKitDemoProject/Pods-ARKitDemoProject.debug.xcconfig"; sourceTree = "<group>"; };
+		53266AE423F02A6F00D94079 /* SpecialistModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialistModel.swift; sourceTree = "<group>"; };
+		53266AE623F02C1400D94079 /* SubscribePupupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribePupupVC.swift; sourceTree = "<group>"; };
+		53963B7E2413D83600B21925 /* WorkspaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceViewController.swift; sourceTree = "<group>"; };
+		53963B802413D93300B21925 /* WorkspaceDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceDataSource.swift; sourceTree = "<group>"; };
+		53963B842413E21900B21925 /* WorkspaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkspaceCell.swift; sourceTree = "<group>"; };
+		53963B862413E24900B21925 /* WorkspaceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkspaceCell.xib; sourceTree = "<group>"; };
+		53A2CA4A2413B003002F7DCD /* ApplicationInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationInfoModel.swift; sourceTree = "<group>"; };
+		53A2CA4C2413BD9A002F7DCD /* GreetingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingViewController.swift; sourceTree = "<group>"; };
+		53A2CA4E2413CA81002F7DCD /* CongratulateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulateViewController.swift; sourceTree = "<group>"; };
+		53A2CA502413CC57002F7DCD /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		53B8C986240C154700808AA8 /* SignUpNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNameViewController.swift; sourceTree = "<group>"; };
+		53B8C988240C183800808AA8 /* SignUpPhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPhoneViewController.swift; sourceTree = "<group>"; };
+		53C57B0B245EC4C3007ABFC9 /* ButtonsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsViewController.swift; sourceTree = "<group>"; };
+		53C57B0E245ECBDD007ABFC9 /* UIView+Anchor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
+		53E57B42240BF38500620BB1 /* AppIDController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIDController.swift; sourceTree = "<group>"; };
+		53E57B44240BF57900620BB1 /* DesignableUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
+		A794244BE64FCD33B8163432 /* Pods-iQube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iQube.release.xcconfig"; path = "Pods/Target Support Files/Pods-iQube/Pods-iQube.release.xcconfig"; sourceTree = "<group>"; };
+		C51BB9DB67CB4CF2055DB66C /* Pods_ARKitDemoProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARKitDemoProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C92B2FB90F20DA8B67745DC7 /* Pods-ARKitDemoProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitDemoProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARKitDemoProject/Pods-ARKitDemoProject.release.xcconfig"; sourceTree = "<group>"; };
+		F518ACBA2269B0F600E12E0A /* GiftPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftPopupVC.swift; sourceTree = "<group>"; };
+		F518ACBC2269B55600E12E0A /* OfferPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferPopupVC.swift; sourceTree = "<group>"; };
+		F518ACBE2269EEED00E12E0A /* PricePopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePopupVC.swift; sourceTree = "<group>"; };
+		F51B4F4F22E70C040098EC91 /* ARKitVC+Nodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARKitVC+Nodes.swift"; sourceTree = "<group>"; };
+		F51B4F5122E70DA70098EC91 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		F51D4167232D1BFF003D29AB /* QubeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QubeTextField.swift; sourceTree = "<group>"; };
+		F532F16B22FC6C4800E7B565 /* ARKitVC+PopoverButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARKitVC+PopoverButton.swift"; sourceTree = "<group>"; };
+		F53BF7CF23A16B870062D5A7 /* WorkspaceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkspaceModel.swift; sourceTree = "<group>"; };
+		F53FF27622E8A6B300210FE8 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		F542182D2301901300766A7A /* FeedbackItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackItemModel.swift; sourceTree = "<group>"; };
+		F54919E122EEDBF400674688 /* BasePopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePopupVC.swift; sourceTree = "<group>"; };
+		F54D01EE22FC357A009C64EE /* PopoverCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverCell.swift; sourceTree = "<group>"; };
+		F54D01EF22FC357A009C64EE /* PopoverCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopoverCell.xib; sourceTree = "<group>"; };
+		F5599EFB22E9862A0026F15E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		F5599F0222E9AAF00026F15E /* SMSCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSCodeViewController.swift; sourceTree = "<group>"; };
+		F560331222EAE49600812376 /* StoryboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardVC.swift; sourceTree = "<group>"; };
+		F56154A122DCAF2800AF1DE9 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		F57E4DF922D71E5400B2E92D /* YoutubeDirectLinkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeDirectLinkService.swift; sourceTree = "<group>"; };
+		F57E4DFC22D73A7500B2E92D /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		F589A47622E9E5D100E7E888 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		F589FCEE22F1BB7900ECC119 /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
+		F5A0488222E5E28E00DB7E1B /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		F5A0488422E5E46A00DB7E1B /* ButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModel.swift; sourceTree = "<group>"; };
+		F5A0E7AD22F3206E00C3E9EE /* ThanksPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksPopupVC.swift; sourceTree = "<group>"; };
+		F5AB159C22D4954B00BCEA4C /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
+		F5AB159E22D4C74C00BCEA4C /* ApiConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConfig.swift; sourceTree = "<group>"; };
+		F5AB15A022D4D9CE00BCEA4C /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		F5AFC44E22FB004F004845A4 /* PopoverTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverTableView.swift; sourceTree = "<group>"; };
+		F5B3CF6922CF79C4006F244A /* ARKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitService.swift; sourceTree = "<group>"; };
+		F5B3CF6F22CF9C1A006F244A /* ARKitVC+Popups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARKitVC+Popups.swift"; sourceTree = "<group>"; };
+		F5F525B52268AE10006FCC84 /* iQube v8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iQube v8.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5F525B82268AE10006FCC84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F5F525BA2268AE10006FCC84 /* StartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartVC.swift; sourceTree = "<group>"; };
+		F5F525BD2268AE10006FCC84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F5F525BF2268AE12006FCC84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F5F525C22268AE12006FCC84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F5F525C42268AE12006FCC84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5F525CA2268B025006FCC84 /* ARKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARKitVC.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F5F525B22268AE10006FCC84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6C76EBF0ACA5923C2A3C8CB8 /* Pods_iQube.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		381DB36877FCAB13D7EFCD67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C51BB9DB67CB4CF2055DB66C /* Pods_ARKitDemoProject.framework */,
+				0126A1E2557F5A68F6885CBC /* Pods_iQube.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4FD46166C06E97C642E9A92E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4674242E4A32E8928318E467 /* Pods-ARKitDemoProject.debug.xcconfig */,
+				C92B2FB90F20DA8B67745DC7 /* Pods-ARKitDemoProject.release.xcconfig */,
+				1B3B031A508C48F82CE29B6F /* Pods-iQube.debug.xcconfig */,
+				A794244BE64FCD33B8163432 /* Pods-iQube.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		53963B832413E20C00B21925 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				53963B842413E21900B21925 /* WorkspaceCell.swift */,
+				53963B862413E24900B21925 /* WorkspaceCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		53A2CA522413D265002F7DCD /* Workspace */ = {
+			isa = PBXGroup;
+			children = (
+				53963B832413E20C00B21925 /* Cell */,
+				53963B7E2413D83600B21925 /* WorkspaceViewController.swift */,
+				53963B802413D93300B21925 /* WorkspaceDataSource.swift */,
+			);
+			path = Workspace;
+			sourceTree = "<group>";
+		};
+		53B8C985240C079E00808AA8 /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				53B8C986240C154700808AA8 /* SignUpNameViewController.swift */,
+				53B8C988240C183800808AA8 /* SignUpPhoneViewController.swift */,
+				F5599F0222E9AAF00026F15E /* SMSCodeViewController.swift */,
+				53A2CA4C2413BD9A002F7DCD /* GreetingViewController.swift */,
+				53A2CA4E2413CA81002F7DCD /* CongratulateViewController.swift */,
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		53C57B0D245ECB4F007ABFC9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				53C57B0E245ECBDD007ABFC9 /* UIView+Anchor.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		53E57B41240BF2A000620BB1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				53A2CA522413D265002F7DCD /* Workspace */,
+				53B8C985240C079E00808AA8 /* Sign Up */,
+				F5599EFB22E9862A0026F15E /* BaseViewController.swift */,
+				53E57B42240BF38500620BB1 /* AppIDController.swift */,
+				53C57B0B245EC4C3007ABFC9 /* ButtonsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F518ACB92269B0DA00E12E0A /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				F54919E122EEDBF400674688 /* BasePopupVC.swift */,
+				F518ACBA2269B0F600E12E0A /* GiftPopupVC.swift */,
+				F518ACBC2269B55600E12E0A /* OfferPopupVC.swift */,
+				53266AE623F02C1400D94079 /* SubscribePupupVC.swift */,
+				F518ACBE2269EEED00E12E0A /* PricePopupVC.swift */,
+				F5A0E7AD22F3206E00C3E9EE /* ThanksPopupVC.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
+		F5599EF622E9837F0026F15E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F560331222EAE49600812376 /* StoryboardVC.swift */,
+				F5F525BA2268AE10006FCC84 /* StartVC.swift */,
+				F5599EF722E9839D0026F15E /* ARKit */,
+				F518ACB92269B0DA00E12E0A /* Popup */,
+				F5AFC44D22FB0037004845A4 /* Popover */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		F5599EF722E9839D0026F15E /* ARKit */ = {
+			isa = PBXGroup;
+			children = (
+				F5F525CA2268B025006FCC84 /* ARKitVC.swift */,
+				F532F16B22FC6C4800E7B565 /* ARKitVC+PopoverButton.swift */,
+				F5B3CF6F22CF9C1A006F244A /* ARKitVC+Popups.swift */,
+				F51B4F4F22E70C040098EC91 /* ARKitVC+Nodes.swift */,
+			);
+			name = ARKit;
+			sourceTree = "<group>";
+		};
+		F56154A022DCAF1600AF1DE9 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				F56154A122DCAF2800AF1DE9 /* ButtonView.swift */,
+				F589FCEE22F1BB7900ECC119 /* HUDView.swift */,
+				F51D4167232D1BFF003D29AB /* QubeTextField.swift */,
+				53E57B44240BF57900620BB1 /* DesignableUITextField.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		F57E4DFB22D73A6A00B2E92D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F57E4DFC22D73A7500B2E92D /* Helper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F589A47522E9E30200E7E888 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F589A47622E9E5D100E7E888 /* UserManager.swift */,
+				F5AB15A022D4D9CE00BCEA4C /* ApiManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F5AB159B22D4953900BCEA4C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F5AB159C22D4954B00BCEA4C /* ImageModel.swift */,
+				F5A0488422E5E46A00DB7E1B /* ButtonModel.swift */,
+				F5A0488222E5E28E00DB7E1B /* ItemModel.swift */,
+				53266AE423F02A6F00D94079 /* SpecialistModel.swift */,
+				F53FF27622E8A6B300210FE8 /* UserModel.swift */,
+				F542182D2301901300766A7A /* FeedbackItemModel.swift */,
+				F53BF7CF23A16B870062D5A7 /* WorkspaceModel.swift */,
+				53A2CA4A2413B003002F7DCD /* ApplicationInfoModel.swift */,
+				53A2CA502413CC57002F7DCD /* BaseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F5AFC44D22FB0037004845A4 /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				F5AFC44E22FB004F004845A4 /* PopoverTableView.swift */,
+				F54D01EE22FC357A009C64EE /* PopoverCell.swift */,
+				F54D01EF22FC357A009C64EE /* PopoverCell.xib */,
+			);
+			name = Popover;
+			sourceTree = "<group>";
+		};
+		F5B3CF6822CF79A6006F244A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F57E4DF922D71E5400B2E92D /* YoutubeDirectLinkService.swift */,
+				F5B3CF6922CF79C4006F244A /* ARKitService.swift */,
+				F5AB159E22D4C74C00BCEA4C /* ApiConfig.swift */,
+				F51B4F5122E70DA70098EC91 /* ImageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F5F525AC2268AE10006FCC84 = {
+			isa = PBXGroup;
+			children = (
+				F5F525B72268AE10006FCC84 /* iQube */,
+				F5F525B62268AE10006FCC84 /* Products */,
+				4FD46166C06E97C642E9A92E /* Pods */,
+				381DB36877FCAB13D7EFCD67 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F5F525B62268AE10006FCC84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F5F525B52268AE10006FCC84 /* iQube v8.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F5F525B72268AE10006FCC84 /* iQube */ = {
+			isa = PBXGroup;
+			children = (
+				53C57B0D245ECB4F007ABFC9 /* Extension */,
+				53E57B41240BF2A000620BB1 /* Controllers */,
+				F56154A022DCAF1600AF1DE9 /* Elements */,
+				F57E4DFB22D73A6A00B2E92D /* Helpers */,
+				F5AB159B22D4953900BCEA4C /* Models */,
+				F589A47522E9E30200E7E888 /* Managers */,
+				F5B3CF6822CF79A6006F244A /* Services */,
+				F5599EF622E9837F0026F15E /* Scenes */,
+				F5F525B82268AE10006FCC84 /* AppDelegate.swift */,
+				F5F525BC2268AE10006FCC84 /* Main.storyboard */,
+				F5F525BF2268AE12006FCC84 /* Assets.xcassets */,
+				F5F525C12268AE12006FCC84 /* LaunchScreen.storyboard */,
+				F5F525C42268AE12006FCC84 /* Info.plist */,
+			);
+			path = iQube;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F5F525B42268AE10006FCC84 /* iQube */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5F525C72268AE12006FCC84 /* Build configuration list for PBXNativeTarget "iQube" */;
+			buildPhases = (
+				84E7A5F87C2CA3102AB735CC /* [CP] Check Pods Manifest.lock */,
+				F5F525B12268AE10006FCC84 /* Sources */,
+				F5F525B22268AE10006FCC84 /* Frameworks */,
+				F5F525B32268AE10006FCC84 /* Resources */,
+				8866E01A4A3DA050F69B9356 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iQube;
+			productName = ARKitDemoProject;
+			productReference = F5F525B52268AE10006FCC84 /* iQube v8.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F5F525AD2268AE10006FCC84 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = test;
+				TargetAttributes = {
+					F5F525B42268AE10006FCC84 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = F5F525B02268AE10006FCC84 /* Build configuration list for PBXProject "iQube" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F5F525AC2268AE10006FCC84;
+			productRefGroup = F5F525B62268AE10006FCC84 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F5F525B42268AE10006FCC84 /* iQube */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F5F525B32268AE10006FCC84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5F525C32268AE12006FCC84 /* LaunchScreen.storyboard in Resources */,
+				F5F525C02268AE12006FCC84 /* Assets.xcassets in Resources */,
+				F54D01F122FC357A009C64EE /* PopoverCell.xib in Resources */,
+				F5F525BE2268AE10006FCC84 /* Main.storyboard in Resources */,
+				53963B872413E24900B21925 /* WorkspaceCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		84E7A5F87C2CA3102AB735CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iQube-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8866E01A4A3DA050F69B9356 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iQube/Pods-iQube-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iQube/Pods-iQube-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iQube/Pods-iQube-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F5F525B12268AE10006FCC84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5AB159F22D4C74C00BCEA4C /* ApiConfig.swift in Sources */,
+				F518ACBB2269B0F600E12E0A /* GiftPopupVC.swift in Sources */,
+				53A2CA512413CC57002F7DCD /* BaseModel.swift in Sources */,
+				F54919E222EEDBF400674688 /* BasePopupVC.swift in Sources */,
+				F5F525BB2268AE10006FCC84 /* StartVC.swift in Sources */,
+				F5A0E7AE22F3206E00C3E9EE /* ThanksPopupVC.swift in Sources */,
+				F54D01F022FC357A009C64EE /* PopoverCell.swift in Sources */,
+				F56154A222DCAF2800AF1DE9 /* ButtonView.swift in Sources */,
+				53A2CA4B2413B003002F7DCD /* ApplicationInfoModel.swift in Sources */,
+				53C57B0F245ECBDD007ABFC9 /* UIView+Anchor.swift in Sources */,
+				F51B4F5222E70DA70098EC91 /* ImageService.swift in Sources */,
+				53A2CA4F2413CA81002F7DCD /* CongratulateViewController.swift in Sources */,
+				F589A47722E9E5D100E7E888 /* UserManager.swift in Sources */,
+				F51D4168232D1BFF003D29AB /* QubeTextField.swift in Sources */,
+				53266AE523F02A6F00D94079 /* SpecialistModel.swift in Sources */,
+				F5F525B92268AE10006FCC84 /* AppDelegate.swift in Sources */,
+				F589FCEF22F1BB7900ECC119 /* HUDView.swift in Sources */,
+				F51B4F5022E70C040098EC91 /* ARKitVC+Nodes.swift in Sources */,
+				53E57B45240BF57900620BB1 /* DesignableUITextField.swift in Sources */,
+				F5AFC44F22FB004F004845A4 /* PopoverTableView.swift in Sources */,
+				53B8C989240C183800808AA8 /* SignUpPhoneViewController.swift in Sources */,
+				F57E4DFA22D71E5400B2E92D /* YoutubeDirectLinkService.swift in Sources */,
+				F518ACBF2269EEED00E12E0A /* PricePopupVC.swift in Sources */,
+				53963B852413E21900B21925 /* WorkspaceCell.swift in Sources */,
+				F5AB159D22D4954B00BCEA4C /* ImageModel.swift in Sources */,
+				F5AB15A122D4D9CE00BCEA4C /* ApiManager.swift in Sources */,
+				F560331322EAE49600812376 /* StoryboardVC.swift in Sources */,
+				F53BF7D023A16B870062D5A7 /* WorkspaceModel.swift in Sources */,
+				53A2CA4D2413BD9A002F7DCD /* GreetingViewController.swift in Sources */,
+				53963B7F2413D83600B21925 /* WorkspaceViewController.swift in Sources */,
+				53266AE723F02C1400D94079 /* SubscribePupupVC.swift in Sources */,
+				F5A0488522E5E46A00DB7E1B /* ButtonModel.swift in Sources */,
+				F5599F0322E9AAF00026F15E /* SMSCodeViewController.swift in Sources */,
+				53963B812413D93300B21925 /* WorkspaceDataSource.swift in Sources */,
+				F5A0488322E5E28E00DB7E1B /* ItemModel.swift in Sources */,
+				53C57B0C245EC4C3007ABFC9 /* ButtonsViewController.swift in Sources */,
+				53B8C987240C154700808AA8 /* SignUpNameViewController.swift in Sources */,
+				F518ACBD2269B55700E12E0A /* OfferPopupVC.swift in Sources */,
+				F532F16C22FC6C4800E7B565 /* ARKitVC+PopoverButton.swift in Sources */,
+				F5F525CB2268B025006FCC84 /* ARKitVC.swift in Sources */,
+				F53FF27722E8A6B300210FE8 /* UserModel.swift in Sources */,
+				F57E4DFD22D73A7500B2E92D /* Helper.swift in Sources */,
+				F542182E2301901300766A7A /* FeedbackItemModel.swift in Sources */,
+				F5B3CF7022CF9C1A006F244A /* ARKitVC+Popups.swift in Sources */,
+				F5599EFC22E9862A0026F15E /* BaseViewController.swift in Sources */,
+				53E57B43240BF38500620BB1 /* AppIDController.swift in Sources */,
+				F5B3CF6A22CF79C4006F244A /* ARKitService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F5F525BC2268AE10006FCC84 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5F525BD2268AE10006FCC84 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F5F525C12268AE12006FCC84 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F5F525C22268AE12006FCC84 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F5F525C52268AE12006FCC84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F5F525C62268AE12006FCC84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F5F525C82268AE12006FCC84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B3B031A508C48F82CE29B6F /* Pods-iQube.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = TSZQ4D456H;
+				INFOPLIST_FILE = "$(SRCROOT)/iQube/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.filimonov.iQube;
+				PRODUCT_NAME = "iQube v8";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F5F525C92268AE12006FCC84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A794244BE64FCD33B8163432 /* Pods-iQube.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = TSZQ4D456H;
+				INFOPLIST_FILE = "$(SRCROOT)/iQube/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.filimonov.iQube;
+				PRODUCT_NAME = "iQube v8";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F5F525B02268AE10006FCC84 /* Build configuration list for PBXProject "iQube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5F525C52268AE12006FCC84 /* Debug */,
+				F5F525C62268AE12006FCC84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5F525C72268AE12006FCC84 /* Build configuration list for PBXNativeTarget "iQube" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5F525C82268AE12006FCC84 /* Debug */,
+				F5F525C92268AE12006FCC84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F5F525AD2268AE10006FCC84 /* Project object */;
+}

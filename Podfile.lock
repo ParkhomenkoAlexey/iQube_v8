@@ -1,0 +1,46 @@
+PODS:
+  - Cartography (4.0.0)
+  - Hex (6.1.0)
+  - KeychainSwift (19.0.0)
+  - Kingfisher (5.13.0):
+    - Kingfisher/Core (= 5.13.0)
+  - Kingfisher/Core (5.13.0)
+  - SVPinView (1.0.7)
+  - SwiftIconFont (3.0.0)
+  - SwiftyJSON (5.0.0)
+  - XCDYouTubeKit (2.9.0)
+
+DEPENDENCIES:
+  - Cartography
+  - Hex
+  - KeychainSwift
+  - Kingfisher
+  - SVPinView
+  - SwiftIconFont
+  - SwiftyJSON
+  - XCDYouTubeKit
+
+SPEC REPOS:
+  trunk:
+    - Cartography
+    - Hex
+    - KeychainSwift
+    - Kingfisher
+    - SVPinView
+    - SwiftIconFont
+    - SwiftyJSON
+    - XCDYouTubeKit
+
+SPEC CHECKSUMS:
+  Cartography: c5626d29056b20f1e95c017326ee4df57cc39ad8
+  Hex: 2f67dd0cbb178cb24992e7529b025b8d16ff0bdc
+  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
+  Kingfisher: 0d334cada987fcddbe9b5cec516406e1ee9d4748
+  SVPinView: 6c1da57e4a1273298802f460c60511ba10f7c831
+  SwiftIconFont: 2ba18554a77c44948dc35b561b344e3c23834a84
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  XCDYouTubeKit: 65b8c362ad9e8b69a7f6bba4e4fa3b26dc0c29f3
+
+PODFILE CHECKSUM: 16c4dd2df707ebbec66d15bfc3c538909145919a
+
+COCOAPODS: 1.9.1
