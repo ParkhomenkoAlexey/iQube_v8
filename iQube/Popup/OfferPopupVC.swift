@@ -24,6 +24,7 @@ final class OfferPopupVC: BasePopupVC {
 		guard let item = itemModel else { return }
 		nameLabel.text = UserManager.shared.user.name
 		textLabel.text = item.text
+        print(#function + "item.text")
         
         if !item.color.isEmpty {
             myButton.tintColor = UIColor(hex: item.color)

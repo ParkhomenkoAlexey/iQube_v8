@@ -5,7 +5,10 @@ PODS:
   - Kingfisher (5.13.0):
     - Kingfisher/Core (= 5.13.0)
   - Kingfisher/Core (5.13.0)
+  - QuickLayout (3.0.0)
   - SVPinView (1.0.7)
+  - SwiftEntryKit (1.2.3):
+    - QuickLayout (= 3.0.0)
   - SwiftIconFont (3.0.0)
   - SwiftyJSON (5.0.0)
   - XCDYouTubeKit (2.9.0)
@@ -16,6 +19,7 @@ DEPENDENCIES:
   - KeychainSwift
   - Kingfisher
   - SVPinView
+  - SwiftEntryKit (= 1.2.3)
   - SwiftIconFont
   - SwiftyJSON
   - XCDYouTubeKit
@@ -26,7 +30,9 @@ SPEC REPOS:
     - Hex
     - KeychainSwift
     - Kingfisher
+    - QuickLayout
     - SVPinView
+    - SwiftEntryKit
     - SwiftIconFont
     - SwiftyJSON
     - XCDYouTubeKit
@@ -36,11 +42,13 @@ SPEC CHECKSUMS:
   Hex: 2f67dd0cbb178cb24992e7529b025b8d16ff0bdc
   KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
   Kingfisher: 0d334cada987fcddbe9b5cec516406e1ee9d4748
+  QuickLayout: 07b45a72b10083fee3f095990cfed1c1e7b27f0a
   SVPinView: 6c1da57e4a1273298802f460c60511ba10f7c831
+  SwiftEntryKit: 340713c2e4a6662c5149629990bf1088bf5f0389
   SwiftIconFont: 2ba18554a77c44948dc35b561b344e3c23834a84
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   XCDYouTubeKit: 65b8c362ad9e8b69a7f6bba4e4fa3b26dc0c29f3
 
-PODFILE CHECKSUM: 16c4dd2df707ebbec66d15bfc3c538909145919a
+PODFILE CHECKSUM: 280abcb7fbb11f3e76ef5180cc4ed6ac158dae16
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.0.beta.2

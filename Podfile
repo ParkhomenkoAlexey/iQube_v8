@@ -14,5 +14,6 @@ target 'iQube' do
   pod 'SwiftIconFont'
   pod 'SVPinView'
   pod 'Cartography'
+  pod 'SwiftEntryKit', '1.2.3'
 
 end

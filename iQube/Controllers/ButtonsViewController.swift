@@ -57,6 +57,7 @@ private extension ButtonsViewController {
         buttons.forEach {
             let button = ButtonView(frame: .zero, button: $0)
             button.callback = { [weak self] (buttonId) in
+                print("button Tapped")
                 self?.handleButtonTap(buttonId: buttonId)
             }
             stackView.addArrangedSubview(button)

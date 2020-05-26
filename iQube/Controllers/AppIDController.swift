@@ -55,11 +55,13 @@ private extension AppIDController {
                 return
             }
             KeychainSwift().set(id, forKey: Const.KeychainKeys.appID)
-            if let token = UserManager.shared.user.token, !token.isEmpty {
-                self?.performSegue(withIdentifier: .WorkspaceSegue, sender: appInfoModel)
-            } else {
-                self?.performSegue(withIdentifier: .ApplicationInfoSegue, sender: appInfoModel)
-            }
+            print("UserManager.shared.user.token: ", UserManager.shared.user.token)
+            self?.performSegue(withIdentifier: .WorkspaceSegue, sender: appInfoModel)
+//            if let token = UserManager.shared.user.token, !token.isEmpty {
+//                self?.performSegue(withIdentifier: .WorkspaceSegue, sender: appInfoModel)
+//            } else {
+//                self?.performSegue(withIdentifier: .ApplicationInfoSegue, sender: appInfoModel)
+//            }
         }
     }
     

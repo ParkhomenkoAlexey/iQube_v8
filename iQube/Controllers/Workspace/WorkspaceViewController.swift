@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import Kingfisher
-import Hex
+//import Kingfisher
+//import Hex
 import ARKit
 
 
@@ -32,6 +32,7 @@ class WorkspaceViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(#function)
         setupView()
         registerCells()
     }

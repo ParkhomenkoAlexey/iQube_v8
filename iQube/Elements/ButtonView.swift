@@ -20,6 +20,7 @@ class ButtonView: UIButton{
         
 		self.addTarget(self, action:  #selector(objectTapped(_:)), for: .touchUpInside)
 		
+        print("setTitle: \(button.text)")
 		self.setTitle(button.text, for: .normal)
         
         let buttonTextColor = UIColor(hex: button.color)

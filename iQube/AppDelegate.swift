@@ -17,7 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var apiManager = ApiManager()
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		print("123")
 //		guard ARImageTrackingConfiguration.isSupported else {
 //			fatalError("ARKit is not available on this device.")
 //		}

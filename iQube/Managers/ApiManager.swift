@@ -17,6 +17,7 @@ class ApiManager {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
+        print(#function)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let jsonData = self.getJSONFromRequest(data, response, error) else {
                 completion(false, nil)
@@ -39,6 +40,7 @@ class ApiManager {
         request.httpMethod = "POST"
         request.httpBody = generateParameters(param: param).data(using: String.Encoding.utf8)
         
+        print(#function)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let jsonData = self.getJSONFromRequest(data, response, error) else {
                 completion(false)
@@ -62,6 +64,7 @@ class ApiManager {
         request.httpMethod = "GET"
         //        request.httpBody = generateParameters(param: param).data(using: String.Encoding.utf8)
         
+        print(#function)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             var images = [ImageModel]()
             
@@ -86,6 +89,7 @@ class ApiManager {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
+        print(#function)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let jsonData = self.getJSONFromRequest(data, response, error) else {
                 completion(false, nil)
@@ -103,6 +107,7 @@ class ApiManager {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
+        print(#function)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let jsonData = self.getJSONFromRequest(data, response, error) else {
                 completion(false, nil)
@@ -120,6 +125,7 @@ class ApiManager {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
+        print(#function)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let jsonData = self.getJSONFromRequest(data, response, error) else {
                 completion(false, nil)
@@ -137,6 +143,7 @@ class ApiManager {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
+        print(#function)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let jsonData = self.getJSONFromRequest(data, response, error) else {
                 completion(false, nil)
@@ -171,6 +178,7 @@ class ApiManager {
         request.httpMethod = "POST"
         request.httpBody = generateParameters(param: param).data(using: String.Encoding.utf8)
         
+        print(#function)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let jsonData = self.getJSONFromRequest(data, response, error) else {
                 completion(false, nil)
@@ -196,6 +204,7 @@ class ApiManager {
         request.httpMethod = "POST"
         request.httpBody = generateParameters(param: param).data(using: String.Encoding.utf8)
         
+        print(#function)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let jsonData = self.getJSONFromRequest(data, response, error) else {
                 completion(false)
@@ -228,6 +237,7 @@ class ApiManager {
         request.httpMethod = "POST"
         request.httpBody = generateParameters(param: param).data(using: String.Encoding.utf8)
         
+        print(#function)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let _ = self.getJSONFromRequest(data, response, error) else { return }
         }.resume()

@@ -163,9 +163,11 @@ extension ARKitVC: ARSCNViewDelegate {
 				setupVideo(rootNode: rootNode, item: item)
                 break
 			case .Image:
+                print(item.type)
 				setupImage(rootNode: rootNode, item: item)
                 break
             case .Text:
+                print(item.type)
                 showOfferPopup(item)
             case .Gift:
                 showGiftPopup(item)
@@ -186,6 +188,7 @@ extension ARKitVC: ARSCNViewDelegate {
             
             // check contains model buttons or not
             if !model.items.filter({ $0.type == .Button }).isEmpty {
+                print("Button")
                 showButtonsPopup(model)
             }
             
