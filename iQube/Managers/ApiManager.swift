@@ -267,7 +267,7 @@ extension ApiManager {
             return nil
         }
         let str = String(decoding: data, as: UTF8.self)
-        print("JSON: \(str)")
+//        print("JSON: \(str)")
         guard let jsonData = try? JSON(data: data) else {
             return nil
         }

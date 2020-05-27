@@ -180,7 +180,8 @@ extension ARKitVC: ARSCNViewDelegate {
                         return
                     }
                     item.specialist = specialist
-                    self?.showSubcribePopup(item)
+//                    self?.showSubcribePopup(item)
+                    self?.showEmployeePopup(item)
                 }
             default:
                 break

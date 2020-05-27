@@ -12,16 +12,17 @@ import SwiftEntryKit
 class SmallAlertView: UIView {
     
     let imageView = UIImageView()
-    let titleLabel = UILabel()
-    let positionLabel = UILabel()
+    let fullNameLabel = UILabel()
+    let specialtyLabel = UILabel()
     let actionButton = AlertButton(direction: .right, size: .small, type: .purple)
     
-    init(image: UIImage, name: String, position: String) {
+    var apiManager = ApiManager()
+    let itemModel: ItemModel
+    
+    init(item: ItemModel) {
+        self.itemModel = item
         super.init(frame: UIScreen.main.bounds)
-//        imageView.image = image
-        imageView.backgroundColor = #colorLiteral(red: 0.8431372549, green: 0.8470588235, blue: 0.8549019608, alpha: 1)
-        titleLabel.text = name
-        positionLabel.text = position
+        setupVC()
         setupElements()
         setupConstraints()
     }
@@ -30,27 +31,36 @@ class SmallAlertView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func setupVC() {
+        guard let specialist = itemModel.specialist else { return }
+        if let urlString = specialist.image_url, let url = URL(string: urlString) {
+            imageView.kf.setImage(with: url)
+        }
+        fullNameLabel.text = specialist.fullname
+        specialtyLabel.text = specialist.specialty
+    }
+    
     @objc func actionButtonPressed() {
-        
-        SwiftEntryKit.transform(to: FullEmployeeAlertView(image: #imageLiteral(resourceName: "ic_done_all_dark_48pt"), name: "Александровсвкий\nСтанислав", position: "Сотрудник"))
-
+        DispatchQueue.main.async {
+            SwiftEntryKit.transform(to: FullEmployeeAlertView(item: self.itemModel))
+        }
     }
 }
 
 // MARK: - Setup View
 extension SmallAlertView {
     func setupElements() {
-        imageView.backgroundColor = .lightGray
+        imageView.backgroundColor = #colorLiteral(red: 0.8431372549, green: 0.8470588235, blue: 0.8549019608, alpha: 1)
         imageView.layer.cornerRadius = 8
         
-        titleLabel.numberOfLines = 0
-        positionLabel.numberOfLines = 0
+        fullNameLabel.numberOfLines = 0
+        specialtyLabel.numberOfLines = 0
         
-        titleLabel.font = UIFont.init(name: "Helvetica", size: 15)
-        titleLabel.textColor = #colorLiteral(red: 0.05098039216, green: 0.05490196078, blue: 0.06274509804, alpha: 1)
+        fullNameLabel.font = UIFont.init(name: "Helvetica", size: 15)
+        fullNameLabel.textColor = #colorLiteral(red: 0.05098039216, green: 0.05490196078, blue: 0.06274509804, alpha: 1)
         
-        positionLabel.font = UIFont.init(name: "Helvetica", size: 15)
-        positionLabel.textColor = #colorLiteral(red: 0.05098039216, green: 0.05490196078, blue: 0.06274509804, alpha: 0.3049640487)
+        specialtyLabel.font = UIFont.init(name: "Helvetica", size: 15)
+        specialtyLabel.textColor = #colorLiteral(red: 0.05098039216, green: 0.05490196078, blue: 0.06274509804, alpha: 0.3049640487)
         
         actionButton.addTarget(self, action: #selector(actionButtonPressed), for: .touchUpInside)
     }
@@ -61,13 +71,13 @@ extension SmallAlertView {
     func setupConstraints() {
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        positionLabel.translatesAutoresizingMaskIntoConstraints = false
+        fullNameLabel.translatesAutoresizingMaskIntoConstraints = false
+        specialtyLabel.translatesAutoresizingMaskIntoConstraints = false
         actionButton.translatesAutoresizingMaskIntoConstraints = false
         
         addSubview(imageView)
-        addSubview(titleLabel)
-        addSubview(positionLabel)
+        addSubview(fullNameLabel)
+        addSubview(specialtyLabel)
         addSubview(actionButton)
         
         NSLayoutConstraint.activate([
@@ -78,15 +88,15 @@ extension SmallAlertView {
         ])
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 22),
-            titleLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 16),
-            titleLabel.trailingAnchor.constraint(equalTo: actionButton.leadingAnchor, constant: -30)
+            fullNameLabel.topAnchor.constraint(equalTo: topAnchor, constant: 22),
+            fullNameLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 16),
+            fullNameLabel.trailingAnchor.constraint(equalTo: actionButton.leadingAnchor, constant: -30)
         ])
         
         NSLayoutConstraint.activate([
-            positionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2),
-            positionLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 16),
-            positionLabel.trailingAnchor.constraint(equalTo: actionButton.leadingAnchor, constant: -30)
+            specialtyLabel.topAnchor.constraint(equalTo: fullNameLabel.bottomAnchor, constant: 2),
+            specialtyLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 16),
+            specialtyLabel.trailingAnchor.constraint(equalTo: actionButton.leadingAnchor, constant: -30)
         ])
         
         NSLayoutConstraint.activate([

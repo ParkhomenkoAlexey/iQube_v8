@@ -18,14 +18,26 @@ class FullEmployeeAlertView: UIView {
     let descriptionLabel = UILabel()
     let actionButton = AlertButton(title: "Выбрать дату визита", direction: .left, size: .large, type: .clear)
     
+    var apiManager = ApiManager()
+    let itemModel: ItemModel
     
-    init(image: UIImage?, name: String, position: String) {
+    weak var arkitView: ARKitVC?
+    
+    init(item: ItemModel) {
+        self.itemModel = item
         super.init(frame: UIScreen.main.bounds)
-//        imageView.image = image
-        titleLabel.text = name
-        positionLabel.text = position
+        setupVC()
         setupElements()
         setupConstraints()
+    }
+    
+    func setupVC() {
+        guard let specialist = itemModel.specialist else { return }
+        if let urlString = specialist.image_url, let url = URL(string: urlString) {
+            imageView.kf.setImage(with: url)
+        }
+        titleLabel.text = specialist.fullname
+        positionLabel.text = specialist.specialty
     }
 
     required init?(coder: NSCoder) {

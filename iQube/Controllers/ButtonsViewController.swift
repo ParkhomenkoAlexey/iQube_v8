@@ -125,6 +125,7 @@ private extension ButtonsViewController {
     
     @IBAction func didTapBackButton() {
         arkitView?.isCanShowPopup = true
+        print("isCanShowPopup = true")
         self.dismiss(animated: true, completion: nil)
     }
 }
