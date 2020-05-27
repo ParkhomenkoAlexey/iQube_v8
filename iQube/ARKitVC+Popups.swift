@@ -89,7 +89,8 @@ extension ARKitVC {
         DispatchQueue.main.async {
             if self.isCanShowPopup {
                 self.isCanShowPopup = false
-                let popupVC = SmallAlertView(item: item)
+                let popupVC = SmallEmployeeAlertView(item: item)
+                print("can show popUp")
                 SwiftEntryKit.display(entry: popupVC, using: self.setupAttributes())
             }
         }
@@ -121,6 +122,7 @@ extension ARKitVC {
         
         attributes.lifecycleEvents.willDisappear = {
             self.isCanShowPopup = true // will disappear action goes here
+            print("will disappear action goes here")
         }
         
         attributes.entryBackground = .color(color: .standardBackground)

@@ -24,11 +24,13 @@
 		53E57B43240BF38500620BB1 /* AppIDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E57B42240BF38500620BB1 /* AppIDController.swift */; };
 		53E57B45240BF57900620BB1 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E57B44240BF57900620BB1 /* DesignableUITextField.swift */; };
 		6C76EBF0ACA5923C2A3C8CB8 /* Pods_iQube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0126A1E2557F5A68F6885CBC /* Pods_iQube.framework */; };
-		F06D802B247D909900D98D89 /* SmallAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D802A247D909900D98D89 /* SmallAlertView.swift */; };
+		F06D802B247D909900D98D89 /* EmployeeFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D802A247D909900D98D89 /* EmployeeFirst.swift */; };
 		F06D802D247D915300D98D89 /* AlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D802C247D915300D98D89 /* AlertButton.swift */; };
 		F06D802F247D917B00D98D89 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D802E247D917B00D98D89 /* UIImageView + Extension.swift */; };
 		F06D8031247D918E00D98D89 /* StackView + Entension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D8030247D918E00D98D89 /* StackView + Entension.swift */; };
-		F06D8033247D91B000D98D89 /* FullEmployeeAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D8032247D91B000D98D89 /* FullEmployeeAlertView.swift */; };
+		F06D8033247D91B000D98D89 /* EmployeeThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D8032247D91B000D98D89 /* EmployeeThird.swift */; };
+		F0E57DF3247EDDAB005613F9 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E57DF2247EDDAB005613F9 /* UIView + Extension.swift */; };
+		F0E57DF5247EDFE8005613F9 /* EmployeeFourth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E57DF4247EDFE8005613F9 /* EmployeeFourth.swift */; };
 		F518ACBB2269B0F600E12E0A /* GiftPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F518ACBA2269B0F600E12E0A /* GiftPopupVC.swift */; };
 		F518ACBD2269B55700E12E0A /* OfferPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F518ACBC2269B55600E12E0A /* OfferPopupVC.swift */; };
 		F518ACBF2269EEED00E12E0A /* PricePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F518ACBE2269EEED00E12E0A /* PricePopupVC.swift */; };
@@ -90,11 +92,13 @@
 		A794244BE64FCD33B8163432 /* Pods-iQube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iQube.release.xcconfig"; path = "Pods/Target Support Files/Pods-iQube/Pods-iQube.release.xcconfig"; sourceTree = "<group>"; };
 		C51BB9DB67CB4CF2055DB66C /* Pods_ARKitDemoProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARKitDemoProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92B2FB90F20DA8B67745DC7 /* Pods-ARKitDemoProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitDemoProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARKitDemoProject/Pods-ARKitDemoProject.release.xcconfig"; sourceTree = "<group>"; };
-		F06D802A247D909900D98D89 /* SmallAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallAlertView.swift; sourceTree = "<group>"; };
+		F06D802A247D909900D98D89 /* EmployeeFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeFirst.swift; sourceTree = "<group>"; };
 		F06D802C247D915300D98D89 /* AlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertButton.swift; sourceTree = "<group>"; };
 		F06D802E247D917B00D98D89 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		F06D8030247D918E00D98D89 /* StackView + Entension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView + Entension.swift"; sourceTree = "<group>"; };
-		F06D8032247D91B000D98D89 /* FullEmployeeAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullEmployeeAlertView.swift; sourceTree = "<group>"; };
+		F06D8032247D91B000D98D89 /* EmployeeThird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeThird.swift; sourceTree = "<group>"; };
+		F0E57DF2247EDDAB005613F9 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
+		F0E57DF4247EDFE8005613F9 /* EmployeeFourth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeFourth.swift; sourceTree = "<group>"; };
 		F518ACBA2269B0F600E12E0A /* GiftPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftPopupVC.swift; sourceTree = "<group>"; };
 		F518ACBC2269B55600E12E0A /* OfferPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferPopupVC.swift; sourceTree = "<group>"; };
 		F518ACBE2269EEED00E12E0A /* PricePopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePopupVC.swift; sourceTree = "<group>"; };
@@ -218,14 +222,23 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		F0E57DF6247EE18D005613F9 /* Employee */ = {
+			isa = PBXGroup;
+			children = (
+				F06D802A247D909900D98D89 /* EmployeeFirst.swift */,
+				F06D8032247D91B000D98D89 /* EmployeeThird.swift */,
+				F0E57DF4247EDFE8005613F9 /* EmployeeFourth.swift */,
+			);
+			path = Employee;
+			sourceTree = "<group>";
+		};
 		F518ACB92269B0DA00E12E0A /* Popup */ = {
 			isa = PBXGroup;
 			children = (
 				F54919E122EEDBF400674688 /* BasePopupVC.swift */,
 				F518ACBA2269B0F600E12E0A /* GiftPopupVC.swift */,
 				F518ACBC2269B55600E12E0A /* OfferPopupVC.swift */,
-				F06D802A247D909900D98D89 /* SmallAlertView.swift */,
-				F06D8032247D91B000D98D89 /* FullEmployeeAlertView.swift */,
+				F0E57DF6247EE18D005613F9 /* Employee */,
 				53266AE623F02C1400D94079 /* SubscribePupupVC.swift */,
 				F518ACBE2269EEED00E12E0A /* PricePopupVC.swift */,
 				F5A0E7AD22F3206E00C3E9EE /* ThanksPopupVC.swift */,
@@ -274,6 +287,7 @@
 				F57E4DFC22D73A7500B2E92D /* Helper.swift */,
 				F06D802E247D917B00D98D89 /* UIImageView + Extension.swift */,
 				F06D8030247D918E00D98D89 /* StackView + Entension.swift */,
+				F0E57DF2247EDDAB005613F9 /* UIView + Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -491,7 +505,7 @@
 				53A2CA4B2413B003002F7DCD /* ApplicationInfoModel.swift in Sources */,
 				53C57B0F245ECBDD007ABFC9 /* UIView+Anchor.swift in Sources */,
 				F51B4F5222E70DA70098EC91 /* ImageService.swift in Sources */,
-				F06D802B247D909900D98D89 /* SmallAlertView.swift in Sources */,
+				F06D802B247D909900D98D89 /* EmployeeFirst.swift in Sources */,
 				53A2CA4F2413CA81002F7DCD /* CongratulateViewController.swift in Sources */,
 				F589A47722E9E5D100E7E888 /* UserManager.swift in Sources */,
 				F51D4168232D1BFF003D29AB /* QubeTextField.swift in Sources */,
@@ -516,6 +530,7 @@
 				53266AE723F02C1400D94079 /* SubscribePupupVC.swift in Sources */,
 				F5A0488522E5E46A00DB7E1B /* ButtonModel.swift in Sources */,
 				F5599F0322E9AAF00026F15E /* SMSCodeViewController.swift in Sources */,
+				F0E57DF5247EDFE8005613F9 /* EmployeeFourth.swift in Sources */,
 				53963B812413D93300B21925 /* WorkspaceDataSource.swift in Sources */,
 				F5A0488322E5E28E00DB7E1B /* ItemModel.swift in Sources */,
 				53C57B0C245EC4C3007ABFC9 /* ButtonsViewController.swift in Sources */,
@@ -523,12 +538,13 @@
 				F518ACBD2269B55700E12E0A /* OfferPopupVC.swift in Sources */,
 				F532F16C22FC6C4800E7B565 /* ARKitVC+PopoverButton.swift in Sources */,
 				F5F525CB2268B025006FCC84 /* ARKitVC.swift in Sources */,
-				F06D8033247D91B000D98D89 /* FullEmployeeAlertView.swift in Sources */,
+				F06D8033247D91B000D98D89 /* EmployeeThird.swift in Sources */,
 				F53FF27722E8A6B300210FE8 /* UserModel.swift in Sources */,
 				F57E4DFD22D73A7500B2E92D /* Helper.swift in Sources */,
 				F542182E2301901300766A7A /* FeedbackItemModel.swift in Sources */,
 				F5B3CF7022CF9C1A006F244A /* ARKitVC+Popups.swift in Sources */,
 				F5599EFC22E9862A0026F15E /* BaseViewController.swift in Sources */,
+				F0E57DF3247EDDAB005613F9 /* UIView + Extension.swift in Sources */,
 				53E57B43240BF38500620BB1 /* AppIDController.swift in Sources */,
 				F5B3CF6A22CF79C4006F244A /* ARKitService.swift in Sources */,
 			);

@@ -45,7 +45,10 @@ class FullEmployeeAlertView: UIView {
     }
     
     @objc func actionButtonPressed() {
-        
+        let newView = EmployeeFinishAlertView(dateRecorded: "23.03.2020", specialistName: "Филимонов Илья")
+        DispatchQueue.main.async {
+            self.transform(to: newView)
+        }
     }
 }
 

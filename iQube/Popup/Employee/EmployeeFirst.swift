@@ -1,5 +1,5 @@
 //
-//  SmallAlertView.swift
+//  SmallEmployeeAlertView.swift
 //  iQube
 //
 //  Created by Алексей Пархоменко on 26.05.2020.
@@ -9,7 +9,7 @@
 import Foundation
 import SwiftEntryKit
 
-class SmallAlertView: UIView {
+class SmallEmployeeAlertView: UIView {
     
     let imageView = UIImageView()
     let fullNameLabel = UILabel()
@@ -41,16 +41,18 @@ class SmallAlertView: UIView {
     }
     
     @objc func actionButtonPressed() {
+        let newView = FullEmployeeAlertView(item: self.itemModel)
         DispatchQueue.main.async {
-            SwiftEntryKit.transform(to: FullEmployeeAlertView(item: self.itemModel))
+            self.transform(to: newView)
         }
     }
 }
 
 // MARK: - Setup View
-extension SmallAlertView {
+extension SmallEmployeeAlertView {
     func setupElements() {
         imageView.backgroundColor = #colorLiteral(red: 0.8431372549, green: 0.8470588235, blue: 0.8549019608, alpha: 1)
+        imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 8
         
         fullNameLabel.numberOfLines = 0
@@ -67,7 +69,7 @@ extension SmallAlertView {
 }
 
 // MARK: - Setup Constraints
-extension SmallAlertView {
+extension SmallEmployeeAlertView {
     func setupConstraints() {
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
