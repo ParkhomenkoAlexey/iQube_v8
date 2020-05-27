@@ -39,7 +39,9 @@ class NameBuyPaymentAlertView: UIView {
     }
     @objc func cancelActionButtonPressed() {
         let newView = NameBuyAlertView(model: model)
-        transform(to: newView)
+        DispatchQueue.main.async {
+            self.transform(to: newView)
+        }
     }
 }
 

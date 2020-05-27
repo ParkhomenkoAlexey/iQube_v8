@@ -27,19 +27,31 @@ extension ARKitVC {
         }
     }
     
-	func showGiftPopup(_ item: ItemModel) {
-		HUDView.shared.hideProgress()
-		DispatchQueue.main.async {
-			if self.isCanShowPopup {
-				self.isCanShowPopup = false
-				guard let popupVC = self.storyboard?.instantiateViewController(withIdentifier: "GiftPopupVC") as? GiftPopupVC else { return }
-				popupVC.itemModel = item
-                popupVC.arkitView = self
-				self.currentPupop = popupVC
-				self.present(popupVC, animated: true, completion: nil)
-			}
-		}
-	}
+//	func showGiftPopup(_ item: ItemModel) {
+//		HUDView.shared.hideProgress()
+//		DispatchQueue.main.async {
+//			if self.isCanShowPopup {
+//				self.isCanShowPopup = false
+//				guard let popupVC = self.storyboard?.instantiateViewController(withIdentifier: "GiftPopupVC") as? GiftPopupVC else { return }
+//				popupVC.itemModel = item
+//                popupVC.arkitView = self
+//				self.currentPupop = popupVC
+//				self.present(popupVC, animated: true, completion: nil)
+//			}
+//		}
+//	} // меняю на showBuyPopup ниже
+    
+    func showGiftPopup(giftModel: GiftModel) {
+        HUDView.shared.hideProgress()
+        
+        DispatchQueue.main.async {
+            if self.isCanShowPopup {
+                self.isCanShowPopup = false
+                let popupVC = PresentStartAlert(model: giftModel)
+                SwiftEntryKit.display(entry: popupVC, using: self.setupAttributes())
+            }
+        }
+    }
 	
 	func showOfferPopup(_ item: ItemModel) {
 		HUDView.shared.hideProgress()
@@ -68,16 +80,15 @@ extension ARKitVC {
 //				self.present(popupVC, animated: true, completion: nil)
 //			}
 //		}
-//	} // меняю на showBuyPopup
+//	} // меняю на showPricePopup ниже
     
-    func showBuyPopup(priceModel: PriceModel) {
+    func showPricePopup(priceModel: PriceModel) {
         HUDView.shared.hideProgress()
         
         DispatchQueue.main.async {
             if self.isCanShowPopup {
                 self.isCanShowPopup = false
                 let popupVC = SmallBuyAlertView(model: priceModel)
-                print("can show popUp")
                 SwiftEntryKit.display(entry: popupVC, using: self.setupAttributes())
             }
         }
@@ -95,7 +106,7 @@ extension ARKitVC {
 //                self.present(popupVC, animated: true, completion: nil)
 //            }
 //        }
-//    } // меняю на showEmployeePopup
+//    } // меняю на showEmployeePopup ниже
     
     func showEmployeePopup(_ item: ItemModel) {
         HUDView.shared.hideProgress()
@@ -104,7 +115,6 @@ extension ARKitVC {
             if self.isCanShowPopup {
                 self.isCanShowPopup = false
                 let popupVC = SmallEmployeeAlertView(item: item)
-                print("can show popUp")
                 SwiftEntryKit.display(entry: popupVC, using: self.setupAttributes())
             }
         }
@@ -136,7 +146,6 @@ extension ARKitVC {
         
         attributes.lifecycleEvents.willDisappear = {
             self.isCanShowPopup = true // will disappear action goes here
-            print("will disappear action goes here")
         }
         
         attributes.entryBackground = .color(color: .standardBackground)

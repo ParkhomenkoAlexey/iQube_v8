@@ -170,9 +170,9 @@ extension ARKitVC: ARSCNViewDelegate {
                 print(item.type)
                 showOfferPopup(item)
             case .Gift:
-                showGiftPopup(item)
+                showGiftPopup(giftModel: GiftModel(userName: "Иван", giftName: "Мишка"))
             case .Price:
-                showBuyPopup(priceModel: PriceModel(productImage: #imageLiteral(resourceName: "user-icon"), productName: "Мячик", description: "Knit crewneck sweater from YMC. Crewneck collar. Raglan sleeves. Ribbed trim. Straight hem.", price: 1500))
+                showPricePopup(priceModel: PriceModel(productImage: #imageLiteral(resourceName: "user-icon"), productName: "Мячик", description: "Knit crewneck sweater from YMC. Crewneck collar. Raglan sleeves. Ribbed trim. Straight hem.", price: 1500))
             case .Subscribe:
                 apiManager.requestGetSpecialistInfo(specialistID: item.specialistID) { [weak self] (success, specialist) in
                     guard success, let specialist = specialist else {

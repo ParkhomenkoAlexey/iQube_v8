@@ -42,8 +42,9 @@ class SmallBuyAlertView: UIView {
     @objc func actionButtonPressed() {
 
         let newView = NameBuyAlertView(model: model)
-        transform(to: newView)
-
+        DispatchQueue.main.async {
+            self.transform(to: newView)
+        }
     }
 }
 

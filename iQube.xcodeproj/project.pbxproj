@@ -29,6 +29,8 @@
 		F06D802F247D917B00D98D89 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D802E247D917B00D98D89 /* UIImageView + Extension.swift */; };
 		F06D8031247D918E00D98D89 /* StackView + Entension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D8030247D918E00D98D89 /* StackView + Entension.swift */; };
 		F06D8033247D91B000D98D89 /* EmployeeThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D8032247D91B000D98D89 /* EmployeeThird.swift */; };
+		F0A9E355247EEE4700B59A0B /* GiftFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9E354247EEE4700B59A0B /* GiftFirst.swift */; };
+		F0A9E357247EEE8500B59A0B /* GiftSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A9E356247EEE8500B59A0B /* GiftSecond.swift */; };
 		F0E57DF3247EDDAB005613F9 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E57DF2247EDDAB005613F9 /* UIView + Extension.swift */; };
 		F0E57DF5247EDFE8005613F9 /* EmployeeFourth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E57DF4247EDFE8005613F9 /* EmployeeFourth.swift */; };
 		F0E57DF8247EE5DA005613F9 /* PriceFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E57DF7247EE5DA005613F9 /* PriceFirst.swift */; };
@@ -101,6 +103,8 @@
 		F06D802E247D917B00D98D89 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		F06D8030247D918E00D98D89 /* StackView + Entension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StackView + Entension.swift"; sourceTree = "<group>"; };
 		F06D8032247D91B000D98D89 /* EmployeeThird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeThird.swift; sourceTree = "<group>"; };
+		F0A9E354247EEE4700B59A0B /* GiftFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftFirst.swift; sourceTree = "<group>"; };
+		F0A9E356247EEE8500B59A0B /* GiftSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftSecond.swift; sourceTree = "<group>"; };
 		F0E57DF2247EDDAB005613F9 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		F0E57DF4247EDFE8005613F9 /* EmployeeFourth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeFourth.swift; sourceTree = "<group>"; };
 		F0E57DF7247EE5DA005613F9 /* PriceFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFirst.swift; sourceTree = "<group>"; };
@@ -230,6 +234,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		F0A9E358247EEEA900B59A0B /* Gift */ = {
+			isa = PBXGroup;
+			children = (
+				F0A9E354247EEE4700B59A0B /* GiftFirst.swift */,
+				F0A9E356247EEE8500B59A0B /* GiftSecond.swift */,
+			);
+			path = Gift;
+			sourceTree = "<group>";
+		};
 		F0E57DF6247EE18D005613F9 /* Employee */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +272,7 @@
 				F0E57DFD247EE6AF005613F9 /* OrderLinkAlertView.swift */,
 				F0E57DFF247EE7A4005613F9 /* Price */,
 				F0E57DF6247EE18D005613F9 /* Employee */,
+				F0A9E358247EEEA900B59A0B /* Gift */,
 				53266AE623F02C1400D94079 /* SubscribePupupVC.swift */,
 				F518ACBE2269EEED00E12E0A /* PricePopupVC.swift */,
 				F5A0E7AD22F3206E00C3E9EE /* ThanksPopupVC.swift */,
@@ -519,6 +533,7 @@
 				F54919E222EEDBF400674688 /* BasePopupVC.swift in Sources */,
 				F06D802F247D917B00D98D89 /* UIImageView + Extension.swift in Sources */,
 				F5F525BB2268AE10006FCC84 /* StartVC.swift in Sources */,
+				F0A9E355247EEE4700B59A0B /* GiftFirst.swift in Sources */,
 				F5A0E7AE22F3206E00C3E9EE /* ThanksPopupVC.swift in Sources */,
 				F54D01F022FC357A009C64EE /* PopoverCell.swift in Sources */,
 				F56154A222DCAF2800AF1DE9 /* ButtonView.swift in Sources */,
@@ -531,6 +546,7 @@
 				F589A47722E9E5D100E7E888 /* UserManager.swift in Sources */,
 				F51D4168232D1BFF003D29AB /* QubeTextField.swift in Sources */,
 				53266AE523F02A6F00D94079 /* SpecialistModel.swift in Sources */,
+				F0A9E357247EEE8500B59A0B /* GiftSecond.swift in Sources */,
 				F5F525B92268AE10006FCC84 /* AppDelegate.swift in Sources */,
 				F589FCEF22F1BB7900ECC119 /* HUDView.swift in Sources */,
 				F06D8031247D918E00D98D89 /* StackView + Entension.swift in Sources */,
