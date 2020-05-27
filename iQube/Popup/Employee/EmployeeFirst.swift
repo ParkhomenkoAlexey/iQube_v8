@@ -52,7 +52,7 @@ class SmallEmployeeAlertView: UIView {
 extension SmallEmployeeAlertView {
     func setupElements() {
         imageView.backgroundColor = #colorLiteral(red: 0.8431372549, green: 0.8470588235, blue: 0.8549019608, alpha: 1)
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = 8
         
         fullNameLabel.numberOfLines = 0

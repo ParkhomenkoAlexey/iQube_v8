@@ -172,7 +172,7 @@ extension ARKitVC: ARSCNViewDelegate {
             case .Gift:
                 showGiftPopup(item)
             case .Price:
-                showPricePopup(item)
+                showBuyPopup(priceModel: PriceModel(productImage: #imageLiteral(resourceName: "user-icon"), productName: "Мячик", description: "Knit crewneck sweater from YMC. Crewneck collar. Raglan sleeves. Ribbed trim. Straight hem.", price: 1500))
             case .Subscribe:
                 apiManager.requestGetSpecialistInfo(specialistID: item.specialistID) { [weak self] (success, specialist) in
                     guard success, let specialist = specialist else {
@@ -180,7 +180,6 @@ extension ARKitVC: ARSCNViewDelegate {
                         return
                     }
                     item.specialist = specialist
-//                    self?.showSubcribePopup(item)
                     self?.showEmployeePopup(item)
                 }
             default:

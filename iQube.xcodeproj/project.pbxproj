@@ -31,6 +31,10 @@
 		F06D8033247D91B000D98D89 /* EmployeeThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D8032247D91B000D98D89 /* EmployeeThird.swift */; };
 		F0E57DF3247EDDAB005613F9 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E57DF2247EDDAB005613F9 /* UIView + Extension.swift */; };
 		F0E57DF5247EDFE8005613F9 /* EmployeeFourth.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E57DF4247EDFE8005613F9 /* EmployeeFourth.swift */; };
+		F0E57DF8247EE5DA005613F9 /* PriceFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E57DF7247EE5DA005613F9 /* PriceFirst.swift */; };
+		F0E57DFA247EE64D005613F9 /* PriceSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E57DF9247EE64D005613F9 /* PriceSecond.swift */; };
+		F0E57DFC247EE671005613F9 /* PriceThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E57DFB247EE671005613F9 /* PriceThird.swift */; };
+		F0E57DFE247EE6AF005613F9 /* OrderLinkAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E57DFD247EE6AF005613F9 /* OrderLinkAlertView.swift */; };
 		F518ACBB2269B0F600E12E0A /* GiftPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F518ACBA2269B0F600E12E0A /* GiftPopupVC.swift */; };
 		F518ACBD2269B55700E12E0A /* OfferPopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F518ACBC2269B55600E12E0A /* OfferPopupVC.swift */; };
 		F518ACBF2269EEED00E12E0A /* PricePopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F518ACBE2269EEED00E12E0A /* PricePopupVC.swift */; };
@@ -99,6 +103,10 @@
 		F06D8032247D91B000D98D89 /* EmployeeThird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeThird.swift; sourceTree = "<group>"; };
 		F0E57DF2247EDDAB005613F9 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		F0E57DF4247EDFE8005613F9 /* EmployeeFourth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeFourth.swift; sourceTree = "<group>"; };
+		F0E57DF7247EE5DA005613F9 /* PriceFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceFirst.swift; sourceTree = "<group>"; };
+		F0E57DF9247EE64D005613F9 /* PriceSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceSecond.swift; sourceTree = "<group>"; };
+		F0E57DFB247EE671005613F9 /* PriceThird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceThird.swift; sourceTree = "<group>"; };
+		F0E57DFD247EE6AF005613F9 /* OrderLinkAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderLinkAlertView.swift; sourceTree = "<group>"; };
 		F518ACBA2269B0F600E12E0A /* GiftPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftPopupVC.swift; sourceTree = "<group>"; };
 		F518ACBC2269B55600E12E0A /* OfferPopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferPopupVC.swift; sourceTree = "<group>"; };
 		F518ACBE2269EEED00E12E0A /* PricePopupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePopupVC.swift; sourceTree = "<group>"; };
@@ -232,12 +240,24 @@
 			path = Employee;
 			sourceTree = "<group>";
 		};
+		F0E57DFF247EE7A4005613F9 /* Price */ = {
+			isa = PBXGroup;
+			children = (
+				F0E57DF7247EE5DA005613F9 /* PriceFirst.swift */,
+				F0E57DF9247EE64D005613F9 /* PriceSecond.swift */,
+				F0E57DFB247EE671005613F9 /* PriceThird.swift */,
+			);
+			path = Price;
+			sourceTree = "<group>";
+		};
 		F518ACB92269B0DA00E12E0A /* Popup */ = {
 			isa = PBXGroup;
 			children = (
 				F54919E122EEDBF400674688 /* BasePopupVC.swift */,
 				F518ACBA2269B0F600E12E0A /* GiftPopupVC.swift */,
 				F518ACBC2269B55600E12E0A /* OfferPopupVC.swift */,
+				F0E57DFD247EE6AF005613F9 /* OrderLinkAlertView.swift */,
+				F0E57DFF247EE7A4005613F9 /* Price */,
 				F0E57DF6247EE18D005613F9 /* Employee */,
 				53266AE623F02C1400D94079 /* SubscribePupupVC.swift */,
 				F518ACBE2269EEED00E12E0A /* PricePopupVC.swift */,
@@ -507,6 +527,7 @@
 				F51B4F5222E70DA70098EC91 /* ImageService.swift in Sources */,
 				F06D802B247D909900D98D89 /* EmployeeFirst.swift in Sources */,
 				53A2CA4F2413CA81002F7DCD /* CongratulateViewController.swift in Sources */,
+				F0E57DFE247EE6AF005613F9 /* OrderLinkAlertView.swift in Sources */,
 				F589A47722E9E5D100E7E888 /* UserManager.swift in Sources */,
 				F51D4168232D1BFF003D29AB /* QubeTextField.swift in Sources */,
 				53266AE523F02A6F00D94079 /* SpecialistModel.swift in Sources */,
@@ -520,6 +541,7 @@
 				F57E4DFA22D71E5400B2E92D /* YoutubeDirectLinkService.swift in Sources */,
 				F06D802D247D915300D98D89 /* AlertButton.swift in Sources */,
 				F518ACBF2269EEED00E12E0A /* PricePopupVC.swift in Sources */,
+				F0E57DFC247EE671005613F9 /* PriceThird.swift in Sources */,
 				53963B852413E21900B21925 /* WorkspaceCell.swift in Sources */,
 				F5AB159D22D4954B00BCEA4C /* ImageModel.swift in Sources */,
 				F5AB15A122D4D9CE00BCEA4C /* ApiManager.swift in Sources */,
@@ -535,6 +557,7 @@
 				F5A0488322E5E28E00DB7E1B /* ItemModel.swift in Sources */,
 				53C57B0C245EC4C3007ABFC9 /* ButtonsViewController.swift in Sources */,
 				53B8C987240C154700808AA8 /* SignUpNameViewController.swift in Sources */,
+				F0E57DF8247EE5DA005613F9 /* PriceFirst.swift in Sources */,
 				F518ACBD2269B55700E12E0A /* OfferPopupVC.swift in Sources */,
 				F532F16C22FC6C4800E7B565 /* ARKitVC+PopoverButton.swift in Sources */,
 				F5F525CB2268B025006FCC84 /* ARKitVC.swift in Sources */,
@@ -546,6 +569,7 @@
 				F5599EFC22E9862A0026F15E /* BaseViewController.swift in Sources */,
 				F0E57DF3247EDDAB005613F9 /* UIView + Extension.swift in Sources */,
 				53E57B43240BF38500620BB1 /* AppIDController.swift in Sources */,
+				F0E57DFA247EE64D005613F9 /* PriceSecond.swift in Sources */,
 				F5B3CF6A22CF79C4006F244A /* ARKitService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

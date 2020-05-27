@@ -55,33 +55,47 @@ extension ARKitVC {
 		}
 	}
 	
-	func showPricePopup(_ item: ItemModel) {
-		HUDView.shared.hideProgress()
-		DispatchQueue.main.async {
-			if self.isCanShowPopup {
-				self.isCanShowPopup = false
-				guard let popupVC = self.storyboard?.instantiateViewController(withIdentifier: "PricePopupVC") as? PricePopupVC else { return }
-				popupVC.itemModel = item
-                popupVC.arkitView = self
-				self.currentPupop = popupVC
-				self.present(popupVC, animated: true, completion: nil)
-			}
-		}
-	}
-	
-    func showSubcribePopup(_ item: ItemModel) {
+//	func showPricePopup(_ item: ItemModel) {
+//		HUDView.shared.hideProgress()
+//		DispatchQueue.main.async {
+//			if self.isCanShowPopup {
+//				self.isCanShowPopup = false
+//				guard let popupVC = self.storyboard?.instantiateViewController(withIdentifier: "PricePopupVC") as? PricePopupVC else { return }
+//				popupVC.itemModel = item
+//                popupVC.arkitView = self
+//				self.currentPupop = popupVC
+//                print("Price")
+//				self.present(popupVC, animated: true, completion: nil)
+//			}
+//		}
+//	} // меняю на showBuyPopup
+    
+    func showBuyPopup(priceModel: PriceModel) {
         HUDView.shared.hideProgress()
+        
         DispatchQueue.main.async {
             if self.isCanShowPopup {
                 self.isCanShowPopup = false
-                guard let popupVC = self.storyboard?.instantiateViewController(withIdentifier: "SubscribePupupVC") as? SubscribePupupVC else { return }
-                popupVC.itemModel = item
-                popupVC.arkitView = self
-                self.currentPupop = popupVC
-                self.present(popupVC, animated: true, completion: nil)
+                let popupVC = SmallBuyAlertView(model: priceModel)
+                print("can show popUp")
+                SwiftEntryKit.display(entry: popupVC, using: self.setupAttributes())
             }
         }
     }
+	
+//    func showSubcribePopup(_ item: ItemModel) {
+//        HUDView.shared.hideProgress()
+//        DispatchQueue.main.async {
+//            if self.isCanShowPopup {
+//                self.isCanShowPopup = false
+//                guard let popupVC = self.storyboard?.instantiateViewController(withIdentifier: "SubscribePupupVC") as? SubscribePupupVC else { return }
+//                popupVC.itemModel = item
+//                popupVC.arkitView = self
+//                self.currentPupop = popupVC
+//                self.present(popupVC, animated: true, completion: nil)
+//            }
+//        }
+//    } // меняю на showEmployeePopup
     
     func showEmployeePopup(_ item: ItemModel) {
         HUDView.shared.hideProgress()
