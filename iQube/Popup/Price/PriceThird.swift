@@ -17,13 +17,13 @@ class NameBuyPaymentAlertView: UIView {
     private let actionButton = AlertButton(title: "Оплатить", direction: .right, size: .medium, type: .purple)
     private let canceledButton = AlertButton(title: "Назад", direction: .left, size: .medium, type: .clear)
     
-    let model: PriceModel
+    let item: ItemModel
     
-    init(model: PriceModel) {
-        self.model = model
+    init(item: ItemModel) {
+        self.item = item
         super.init(frame: UIScreen.main.bounds)
-        self.priceLabel.text = "\(model.price) руб."
-        self.titleLabel.text = model.productName
+        self.priceLabel.text = "\(Int(item.price ?? 0)) руб."
+        self.titleLabel.text = item.name
 
         setupElements()
         setupConstraints()
@@ -38,7 +38,7 @@ class NameBuyPaymentAlertView: UIView {
         transform(to: newView)
     }
     @objc func cancelActionButtonPressed() {
-        let newView = NameBuyAlertView(model: model)
+        let newView = NameBuyAlertView(item: item)
         DispatchQueue.main.async {
             self.transform(to: newView)
         }
@@ -97,8 +97,7 @@ extension NameBuyPaymentAlertView {
 
         NSLayoutConstraint.activate([
             priceLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 27),
-            priceLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 100),
-            priceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -100),
+            priceLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
 
         NSLayoutConstraint.activate([

@@ -19,13 +19,11 @@ class PresentStartAlert: UIView {
     private let imageView = UIImageView()
     private let specialtyLabel = UILabel()
     private let actionButton = AlertButton(title: "Получить", direction: .right, size: .large, type: .purple)
-    private var userName = String()
-    let model: GiftModel
+    let item: ItemModel
     
-    init(model: GiftModel) {
-        self.model = model
+    init(item: ItemModel) {
+        self.item = item
         super.init(frame: UIScreen.main.bounds)
-        self.userName = model.userName
 
         setupElements()
         setupConstraints()
@@ -36,7 +34,7 @@ class PresentStartAlert: UIView {
     }
 
     @objc func actionButtonPressed() {
-        let newView = PresentFinishAlert(model: model)
+        let newView = PresentFinishAlert(item: item)
         DispatchQueue.main.async {
             self.transform(to: newView)
         }
@@ -50,11 +48,15 @@ extension PresentStartAlert {
         imageView.image = UIImage(named: "present")
         imageView.backgroundColor = .clear
         imageView.layer.cornerRadius = 8
+        
+        let index = item.text.firstIndex(of: ",")
+        let name = item.text.prefix(upTo: index!)
+        let other = item.text.suffix(from: item.text.firstIndex(of: "\n")!).trimmingCharacters(in: .whitespacesAndNewlines)
 
         let attrs1 = [NSAttributedString.Key.font : UIFont(name: "Helvetica-Bold", size: 18)]
         let attrs2 = [NSAttributedString.Key.font : UIFont(name: "Helvetica", size: 18)]
-        let attributedString1 = NSMutableAttributedString(string:"\(userName),\n", attributes:attrs1 as [NSAttributedString.Key : Any])
-        let attributedString2 = NSMutableAttributedString(string:"Для Вас мы подготовили персональтный подарок", attributes:attrs2 as [NSAttributedString.Key : Any])
+        let attributedString1 = NSMutableAttributedString(string:"\(name),\n", attributes:attrs1 as [NSAttributedString.Key : Any])
+        let attributedString2 = NSMutableAttributedString(string:other, attributes:attrs2 as [NSAttributedString.Key : Any])
 
         attributedString1.append(attributedString2)
         specialtyLabel.attributedText = attributedString1

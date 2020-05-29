@@ -14,12 +14,12 @@ class PresentFinishAlert: UIView {
     private let imageView = UIImageView()
     private let specialtyLabel = UILabel()
     private var presentNameLabel = UILabel()
-    let model: GiftModel
+    let item: ItemModel
 
-    init(model: GiftModel) {
-        self.model = model
+    init(item: ItemModel) {
+        self.item = item
         super.init(frame: UIScreen.main.bounds)
-        self.presentNameLabel.text = model.giftName
+        self.presentNameLabel.text = item.name
         
         setupElements()
         setupConstraints()

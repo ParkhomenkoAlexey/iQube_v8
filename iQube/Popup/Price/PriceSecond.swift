@@ -17,16 +17,18 @@ class NameBuyAlertView: UIView {
     let priceLabel = UILabel()
     let actionButton = AlertButton(title: "Купить", direction: .right, size: .large, type: .purple)
     
-    let model: PriceModel
+    let item: ItemModel
     
-    init(model: PriceModel) {
-        self.model = model
+    init(item: ItemModel) {
+        self.item = item
         super.init(frame: UIScreen.main.bounds)
 
-        self.imageView.image = model.productImage
-        self.titleLabel.text = model.productName
-        self.descriptionLabel.text = model.description
-        self.priceLabel.text = "\(model.price) руб."
+        if let url = URL(string: item.imageURL ?? "") {
+            self.imageView.kf.setImage(with: url)
+        }
+        self.titleLabel.text = item.name
+        self.descriptionLabel.text = item.text
+        self.priceLabel.text = "\(Int(item.price ?? 0)) руб."
         setupElements()
         setupConstraints()
     }
@@ -37,7 +39,7 @@ class NameBuyAlertView: UIView {
 
     @objc func actionButtonPressed() {
         
-        let newView = NameBuyPaymentAlertView(model: model)
+        let newView = NameBuyPaymentAlertView(item: item)
         DispatchQueue.main.async {
             self.transform(to: newView)
         }
@@ -61,6 +63,8 @@ extension NameBuyAlertView {
         descriptionLabel.font = UIFont.init(name: "Helvetica", size: 16)
         descriptionLabel.textColor = #colorLiteral(red: 0.05098039216, green: 0.05490196078, blue: 0.06274509804, alpha: 0.4960764657)
         descriptionLabel.numberOfLines = 0
+        
+        priceLabel.textAlignment = .center
 
         actionButton.addTarget(self, action: #selector(actionButtonPressed), for: .touchUpInside)
 
@@ -76,41 +80,33 @@ extension NameBuyAlertView {
 extension NameBuyAlertView {
     func setupConstraints() {
 
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         actionButton.translatesAutoresizingMaskIntoConstraints = false
         priceLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        let labelsStackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel], axis: .vertical, spacing: 10)
+        let topStackView = UIStackView(arrangedSubviews: [imageView, labelsStackView], axis: .horizontal, spacing: 20)
+        topStackView.alignment = .top
+        topStackView.translatesAutoresizingMaskIntoConstraints = false
 
-        addSubview(imageView)
-        addSubview(titleLabel)
-        addSubview(descriptionLabel)
+        addSubview(topStackView)
         addSubview(actionButton)
         addSubview(priceLabel)
 
+        
+        labelsStackView.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        imageView.widthAnchor.constraint(equalToConstant: 95).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 95).isActive = true
         NSLayoutConstraint.activate([
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: 34),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 21),
-            imageView.widthAnchor.constraint(equalToConstant: 95),
-            imageView.heightAnchor.constraint(equalToConstant: 95)
+            topStackView.topAnchor.constraint(equalTo: topAnchor, constant: 34),
+            topStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 21),
+            topStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -21),
+            
         ])
 
-        NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 34),
-            titleLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 20),
-            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
-        ])
 
         NSLayoutConstraint.activate([
-            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10 ),
-            descriptionLabel.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 20),
-            descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -37)
-        ])
-
-        NSLayoutConstraint.activate([
-            priceLabel.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 39),
-            priceLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 100),
-            priceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -100)
+            priceLabel.topAnchor.constraint(equalTo: topStackView.bottomAnchor, constant: 39),
+            priceLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
 
         NSLayoutConstraint.activate([

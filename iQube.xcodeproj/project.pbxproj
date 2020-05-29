@@ -24,6 +24,8 @@
 		53E57B43240BF38500620BB1 /* AppIDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E57B42240BF38500620BB1 /* AppIDController.swift */; };
 		53E57B45240BF57900620BB1 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E57B44240BF57900620BB1 /* DesignableUITextField.swift */; };
 		6C76EBF0ACA5923C2A3C8CB8 /* Pods_iQube.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0126A1E2557F5A68F6885CBC /* Pods_iQube.framework */; };
+		F060889E2481785D00BC5BB4 /* EmployeeSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060889D2481785D00BC5BB4 /* EmployeeSecond.swift */; };
+		F06088A02481787500BC5BB4 /* EmployeeSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F060889F2481787500BC5BB4 /* EmployeeSegmentedControl.swift */; };
 		F06D802B247D909900D98D89 /* EmployeeFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D802A247D909900D98D89 /* EmployeeFirst.swift */; };
 		F06D802D247D915300D98D89 /* AlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D802C247D915300D98D89 /* AlertButton.swift */; };
 		F06D802F247D917B00D98D89 /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06D802E247D917B00D98D89 /* UIImageView + Extension.swift */; };
@@ -98,6 +100,8 @@
 		A794244BE64FCD33B8163432 /* Pods-iQube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iQube.release.xcconfig"; path = "Pods/Target Support Files/Pods-iQube/Pods-iQube.release.xcconfig"; sourceTree = "<group>"; };
 		C51BB9DB67CB4CF2055DB66C /* Pods_ARKitDemoProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARKitDemoProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92B2FB90F20DA8B67745DC7 /* Pods-ARKitDemoProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARKitDemoProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARKitDemoProject/Pods-ARKitDemoProject.release.xcconfig"; sourceTree = "<group>"; };
+		F060889D2481785D00BC5BB4 /* EmployeeSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSecond.swift; sourceTree = "<group>"; };
+		F060889F2481787500BC5BB4 /* EmployeeSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSegmentedControl.swift; sourceTree = "<group>"; };
 		F06D802A247D909900D98D89 /* EmployeeFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeFirst.swift; sourceTree = "<group>"; };
 		F06D802C247D915300D98D89 /* AlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertButton.swift; sourceTree = "<group>"; };
 		F06D802E247D917B00D98D89 /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
@@ -247,8 +251,10 @@
 			isa = PBXGroup;
 			children = (
 				F06D802A247D909900D98D89 /* EmployeeFirst.swift */,
+				F060889D2481785D00BC5BB4 /* EmployeeSecond.swift */,
 				F06D8032247D91B000D98D89 /* EmployeeThird.swift */,
 				F0E57DF4247EDFE8005613F9 /* EmployeeFourth.swift */,
+				F060889F2481787500BC5BB4 /* EmployeeSegmentedControl.swift */,
 			);
 			path = Employee;
 			sourceTree = "<group>";
@@ -564,6 +570,8 @@
 				F560331322EAE49600812376 /* StoryboardVC.swift in Sources */,
 				F53BF7D023A16B870062D5A7 /* WorkspaceModel.swift in Sources */,
 				53A2CA4D2413BD9A002F7DCD /* GreetingViewController.swift in Sources */,
+				F060889E2481785D00BC5BB4 /* EmployeeSecond.swift in Sources */,
+				F06088A02481787500BC5BB4 /* EmployeeSegmentedControl.swift in Sources */,
 				53963B7F2413D83600B21925 /* WorkspaceViewController.swift in Sources */,
 				53266AE723F02C1400D94079 /* SubscribePupupVC.swift in Sources */,
 				F5A0488522E5E46A00DB7E1B /* ButtonModel.swift in Sources */,

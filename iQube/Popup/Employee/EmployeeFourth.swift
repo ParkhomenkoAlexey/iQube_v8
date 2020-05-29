@@ -46,7 +46,7 @@ extension EmployeeFinishAlertView {
         fullNameLabel.font = UIFont.init(name: "Helvetica", size: 24)
 
 
-        specialtyLabel.text = "Вы записаны на \(dateRecorded) к специалисту \(specialistName)"
+        specialtyLabel.text = "Вы записаны на \(dateRecorded) к специалисту - \(specialistName)"
         specialtyLabel.numberOfLines = 0
         specialtyLabel.textAlignment = .center
         specialtyLabel.textColor =  #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)

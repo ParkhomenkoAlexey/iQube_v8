@@ -27,32 +27,6 @@ extension ARKitVC {
         }
     }
     
-//	func showGiftPopup(_ item: ItemModel) {
-//		HUDView.shared.hideProgress()
-//		DispatchQueue.main.async {
-//			if self.isCanShowPopup {
-//				self.isCanShowPopup = false
-//				guard let popupVC = self.storyboard?.instantiateViewController(withIdentifier: "GiftPopupVC") as? GiftPopupVC else { return }
-//				popupVC.itemModel = item
-//                popupVC.arkitView = self
-//				self.currentPupop = popupVC
-//				self.present(popupVC, animated: true, completion: nil)
-//			}
-//		}
-//	} // меняю на showBuyPopup ниже
-    
-    func showGiftPopup(giftModel: GiftModel) {
-        HUDView.shared.hideProgress()
-        
-        DispatchQueue.main.async {
-            if self.isCanShowPopup {
-                self.isCanShowPopup = false
-                let popupVC = PresentStartAlert(model: giftModel)
-                SwiftEntryKit.display(entry: popupVC, using: self.setupAttributes())
-            }
-        }
-    }
-	
 	func showOfferPopup(_ item: ItemModel) {
 		HUDView.shared.hideProgress()
 		DispatchQueue.main.async {
@@ -66,57 +40,32 @@ extension ARKitVC {
 			}
 		}
 	}
-	
-//	func showPricePopup(_ item: ItemModel) {
-//		HUDView.shared.hideProgress()
-//		DispatchQueue.main.async {
-//			if self.isCanShowPopup {
-//				self.isCanShowPopup = false
-//				guard let popupVC = self.storyboard?.instantiateViewController(withIdentifier: "PricePopupVC") as? PricePopupVC else { return }
-//				popupVC.itemModel = item
-//                popupVC.arkitView = self
-//				self.currentPupop = popupVC
-//                print("Price")
-//				self.present(popupVC, animated: true, completion: nil)
-//			}
-//		}
-//	} // меняю на showPricePopup ниже
     
-    func showPricePopup(priceModel: PriceModel) {
+    func showGiftPopup(_ item: ItemModel) {
         HUDView.shared.hideProgress()
         
         DispatchQueue.main.async {
-            if self.isCanShowPopup {
-                self.isCanShowPopup = false
-                let popupVC = SmallBuyAlertView(model: priceModel)
-                SwiftEntryKit.display(entry: popupVC, using: self.setupAttributes())
-            }
+            let alert = PresentStartAlert(item: item)
+            self.isShouldShow(item: item, alert: alert)
+        
         }
     }
-	
-//    func showSubcribePopup(_ item: ItemModel) {
-//        HUDView.shared.hideProgress()
-//        DispatchQueue.main.async {
-//            if self.isCanShowPopup {
-//                self.isCanShowPopup = false
-//                guard let popupVC = self.storyboard?.instantiateViewController(withIdentifier: "SubscribePupupVC") as? SubscribePupupVC else { return }
-//                popupVC.itemModel = item
-//                popupVC.arkitView = self
-//                self.currentPupop = popupVC
-//                self.present(popupVC, animated: true, completion: nil)
-//            }
-//        }
-//    } // меняю на showEmployeePopup ниже
+    
+    func showPricePopup(_ item: ItemModel) {
+        HUDView.shared.hideProgress()
+        
+        DispatchQueue.main.async {
+            let alert = SmallBuyAlertView(item: item)
+            self.isShouldShow(item: item, alert: alert)
+        }
+    }
     
     func showEmployeePopup(_ item: ItemModel) {
         HUDView.shared.hideProgress()
-        
         DispatchQueue.main.async {
-            if self.isCanShowPopup {
-                self.isCanShowPopup = false
-                let popupVC = SmallEmployeeAlertView(item: item)
-                SwiftEntryKit.display(entry: popupVC, using: self.setupAttributes())
-            }
+            
+            let alert = SmallEmployeeAlertView(item: item)
+            self.isShouldShow(item: item, alert: alert)
         }
     }
     
@@ -132,6 +81,28 @@ extension ARKitVC {
 		}
 	}
     
+    func isShouldShow(item: ItemModel, alert: UIView) {
+        if self.currectAlertType == nil {
+            if self.beforeAlertType == item.type {
+                self.beforeAlertType = self.currectAlertType
+                self.currectAlertType = item.type
+                SwiftEntryKit.display(entry: alert, using: self.setupAttributes())
+            } else {
+                self.beforeAlertType = self.currectAlertType
+                self.currectAlertType = item.type
+                SwiftEntryKit.display(entry: alert, using: self.setupAttributes())
+            }
+        } else {
+            if self.currectAlertType == item.type {
+                // не открывать
+            } else {
+                self.beforeAlertType = self.currectAlertType
+                self.currectAlertType = item.type
+                SwiftEntryKit.display(entry: alert, using: self.setupAttributes())
+            }
+        }
+    }
+    
     func setupAttributes() -> EKAttributes {
         var attributes = EKAttributes.bottomFloat
         attributes.displayDuration = .infinity
@@ -145,7 +116,9 @@ extension ARKitVC {
         )
         
         attributes.lifecycleEvents.willDisappear = {
-            self.isCanShowPopup = true // will disappear action goes here
+            self.beforeAlertType = self.currectAlertType
+            self.currectAlertType = nil
+    
         }
         
         attributes.entryBackground = .color(color: .standardBackground)

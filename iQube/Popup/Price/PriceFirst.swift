@@ -22,15 +22,19 @@ class SmallBuyAlertView: UIView {
     let titleLabel = UILabel()
     let priceLabel = UILabel()
     let actionButton = AlertButton(direction: .right, size: .small, type: .purple)
-    let model: PriceModel
+    let item: ItemModel
 
-    init(model: PriceModel) {
-        self.model = model
+    init(item: ItemModel) {
+        self.item = item
         super.init(frame: UIScreen.main.bounds)
+        if let url = URL(string: item.itemIcon ?? "") {
+            
+            self.imageView.kf.setImage(with: url)
+        }
+        self.titleLabel.text = item.name
         
-        self.imageView.image = model.productImage
-        self.titleLabel.text = model.productName
-        self.priceLabel.text = "\(model.price) руб."
+        
+        self.priceLabel.text = "\(Int(item.price ?? 0)) руб."
         setupElements()
         setupConstraints()
     }
@@ -41,7 +45,7 @@ class SmallBuyAlertView: UIView {
 
     @objc func actionButtonPressed() {
 
-        let newView = NameBuyAlertView(model: model)
+        let newView = NameBuyAlertView(item: item)
         DispatchQueue.main.async {
             self.transform(to: newView)
         }

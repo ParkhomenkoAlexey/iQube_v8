@@ -36,12 +36,13 @@ class SmallEmployeeAlertView: UIView {
         if let urlString = specialist.image_url, let url = URL(string: urlString) {
             imageView.kf.setImage(with: url)
         }
+        print(specialist.work_schedule)
         fullNameLabel.text = specialist.fullname
         specialtyLabel.text = specialist.specialty
     }
     
     @objc func actionButtonPressed() {
-        let newView = FullEmployeeAlertView(item: self.itemModel)
+        let newView = DateEmployeeAlertView(item: self.itemModel)
         DispatchQueue.main.async {
             self.transform(to: newView)
         }
