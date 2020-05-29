@@ -23,14 +23,28 @@ class NameBuyAlertView: UIView {
         self.item = item
         super.init(frame: UIScreen.main.bounds)
 
+        setup()
+        setupElements()
+        setupConstraints()
+    }
+    
+    func setup() {
         if let url = URL(string: item.imageURL ?? "") {
             self.imageView.kf.setImage(with: url)
         }
         self.titleLabel.text = item.name
         self.descriptionLabel.text = item.text
         self.priceLabel.text = "\(Int(item.price ?? 0)) руб."
-        setupElements()
-        setupConstraints()
+        
+        if let buttonText = item.buttonText {
+//            print("buttonText: \(buttonText)")
+            actionButton.setTitle(buttonText, for: .normal)
+        }
+        
+        if !item.color.isEmpty {
+//            print("color: color not empty")
+            actionButton.backgroundColor = UIColor(hex: item.color)
+        }
     }
 
     required init?(coder: NSCoder) {

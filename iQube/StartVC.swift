@@ -86,7 +86,7 @@ extension StartVC: UIPickerViewDelegate, UIPickerViewDataSource {
                 return
             }
             
-            guard let images = images else { return }
+//            guard let images = images else { return }
         }
     }
     

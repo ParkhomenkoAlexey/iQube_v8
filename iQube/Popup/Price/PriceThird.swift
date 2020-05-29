@@ -14,8 +14,10 @@ class NameBuyPaymentAlertView: UIView {
     private let titleLabel = UILabel()
     private let priceLabel = UILabel()
     private let specialtyLabel = UILabel()
-    private let actionButton = AlertButton(title: "Оплатить", direction: .right, size: .medium, type: .purple)
+    private let actionButton = AlertButton(title: "Оплатить    ", direction: .right, size: .medium, type: .purple)
     private let canceledButton = AlertButton(title: "Назад", direction: .left, size: .medium, type: .clear)
+    
+    var apiManager = ApiManager()
     
     let item: ItemModel
     
@@ -34,8 +36,20 @@ class NameBuyPaymentAlertView: UIView {
     }
 
     @objc func actionButtonPressed() {
+        print("item.id: \(item.id)")
+        // не хватает обработчика ошибок
+        apiManager.requestWebHook(userID: UserManager.shared.user.id, markerID: item.id, buttonID: 0)
+        
+        if let url = item.buttonURL {
+            url.openURL()
+        } else {
+            print("no openUrl")
+        }
+        
         let newView = OrderLinkAlertView()
-        transform(to: newView)
+        DispatchQueue.main.async {
+            self.transform(to: newView)
+        }
     }
     @objc func cancelActionButtonPressed() {
         let newView = NameBuyAlertView(item: item)

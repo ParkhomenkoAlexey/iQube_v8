@@ -18,6 +18,8 @@ class BalanceEnterAlertView: UIView {
     private let canceledButton = AlertButton(title: "Назад", direction: .left, size: .medium, type: .clear)
     private var userName = String()
     let item: ItemModel
+    
+    var apiManager = ApiManager()
 
     init(item: ItemModel) {
         self.item = item
@@ -33,8 +35,20 @@ class BalanceEnterAlertView: UIView {
     }
 
     @objc func actionButtonPressed() {
+        // не хватает обработчика ошибок
+        print("item.id: \(item.id)")
+        apiManager.requestWebHook(userID: UserManager.shared.user.id, markerID: item.id, buttonID: 0)
+        
+        if let url = item.buttonURL {
+            url.openURL()
+        } else {
+            print("no openUrl")
+        }
+        
         let newView = OrderLinkAlertView()
-        transform(to: newView)
+        DispatchQueue.main.async {
+            self.transform(to: newView)
+        }
 
     }
     @objc func cancelActionButtonPressed() {

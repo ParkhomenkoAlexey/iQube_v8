@@ -21,6 +21,8 @@ class DateEmployeeAlertView: UIView {
     var mounth: [String] = []
     var mounthSegmentControl: CustomSegmentedControl?
     
+    var apiManager = ApiManager()
+    
     let itemModel: ItemModel
 
     init(item: ItemModel) {
@@ -53,6 +55,17 @@ class DateEmployeeAlertView: UIView {
     }
 
     @objc func actionButtonFinigh() {
+        
+        // не хватает обработчика ошибок
+        print("item.id: \(itemModel.id)")
+        apiManager.requestWebHook(userID: UserManager.shared.user.id, markerID: itemModel.id, buttonID: 0)
+        
+        if let url = itemModel.buttonURL {
+            url.openURL()
+        } else {
+            print("no openUrl")
+        }
+        
         let newView = EmployeeFinishAlertView(dateRecorded: "23.03.2020", specialistName: "Филимонов Илья")
         DispatchQueue.main.async {
             self.transform(to: newView)

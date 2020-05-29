@@ -36,7 +36,7 @@ class SmallEmployeeAlertView: UIView {
         if let urlString = specialist.image_url, let url = URL(string: urlString) {
             imageView.kf.setImage(with: url)
         }
-        print(specialist.work_schedule)
+//        print(specialist.work_schedule)
         fullNameLabel.text = specialist.fullname
         specialtyLabel.text = specialist.specialty
     }

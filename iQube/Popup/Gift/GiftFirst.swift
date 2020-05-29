@@ -21,6 +21,8 @@ class PresentStartAlert: UIView {
     private let actionButton = AlertButton(title: "Получить", direction: .right, size: .large, type: .purple)
     let item: ItemModel
     
+    var apiManager = ApiManager()
+    
     init(item: ItemModel) {
         self.item = item
         super.init(frame: UIScreen.main.bounds)
@@ -34,6 +36,17 @@ class PresentStartAlert: UIView {
     }
 
     @objc func actionButtonPressed() {
+        
+        print("item.id: \(item.id)")
+        // не хватает обработчика ошибок
+        apiManager.requestWebHook(userID: UserManager.shared.user.id, markerID: item.id, buttonID: 0)
+        
+        if let url = item.buttonURL {
+            url.openURL()
+        } else {
+            print("no openUrl")
+        }
+        
         let newView = PresentFinishAlert(item: item)
         DispatchQueue.main.async {
             self.transform(to: newView)

@@ -23,6 +23,10 @@ class BalanceStartAlertView: UIView {
         super.init(frame: UIScreen.main.bounds)
         self.userName = item.text
         self.balancedLabel.text = "(\(item.value ?? 6666) руб.)"
+        
+        if !item.color.isEmpty {
+            actionButton.backgroundColor = UIColor(hex: item.color)
+        }
 
         setupElements()
         setupConstraints()
@@ -34,7 +38,9 @@ class BalanceStartAlertView: UIView {
 
     @objc func actionButtonPressed() {
         let newView = BalanceEnterAlertView(item: item)
-        transform(to: newView)
+        DispatchQueue.main.async {
+            self.transform(to: newView)
+        }
     }
 }
 
