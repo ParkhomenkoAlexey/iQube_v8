@@ -38,6 +38,7 @@ class ARKitVC: UIViewController {
 	}
 	
 	var currentPupop: UIViewController?
+    var currectAlert: UIView?
 	var isCanShowPopup = true
 	
 	//popover
@@ -155,7 +156,7 @@ extension ARKitVC: ARSCNViewDelegate {
 	}
 	
 	func displayDetailView(on rootNode: SCNNode, model: ImageModel) {
-		
+		// ItemModel
 		//цикл добавления итемов на экран
 		for item in model.items {
             switch item.type {
@@ -170,9 +171,17 @@ extension ARKitVC: ARSCNViewDelegate {
                 print(item.type)
                 showOfferPopup(item)
             case .Gift:
+                print(item.name)
+                print(item.text)
                 showGiftPopup(giftModel: GiftModel(userName: "Иван", giftName: "Мишка"))
             case .Price:
+                print(item.buttonText)
+                print(item.color)
+                print(item.text)
+                print(item.price)
                 showPricePopup(priceModel: PriceModel(productImage: #imageLiteral(resourceName: "user-icon"), productName: "Мячик", description: "Knit crewneck sweater from YMC. Crewneck collar. Raglan sleeves. Ribbed trim. Straight hem.", price: 1500))
+            case .Balance:
+                print("Balance")
             case .Subscribe:
                 apiManager.requestGetSpecialistInfo(specialistID: item.specialistID) { [weak self] (success, specialist) in
                     guard success, let specialist = specialist else {

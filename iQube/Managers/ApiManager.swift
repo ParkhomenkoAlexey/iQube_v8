@@ -85,10 +85,9 @@ class ApiManager {
     
     func requestGetApplicationInfo(id: String, completion: @escaping ((_ success: Bool, _ appInfo: ApplicationInfoModel?)->())) {
         guard let url = URL(string: ApiConfig.getApplicationInfo.url+"\(id)") else { return }
-        print(url)
+        
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        
         print(#function)
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let jsonData = self.getJSONFromRequest(data, response, error) else {
@@ -267,7 +266,7 @@ extension ApiManager {
             return nil
         }
         let str = String(decoding: data, as: UTF8.self)
-//        print("JSON: \(str)")
+        print("JSON: \(str)")
         guard let jsonData = try? JSON(data: data) else {
             return nil
         }

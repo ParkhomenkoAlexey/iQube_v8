@@ -17,6 +17,7 @@ enum ModelItemType: String {
     case Gift
     case Price
     case Subscribe
+    case Balance
 }
 
 enum ButtonType: String {

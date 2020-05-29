@@ -32,7 +32,6 @@ class WorkspaceViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(#function)
         setupView()
         registerCells()
     }
