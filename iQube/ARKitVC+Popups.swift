@@ -69,6 +69,15 @@ extension ARKitVC {
         }
     }
     
+    func showBalancePopup(_ item: ItemModel) {
+        HUDView.shared.hideProgress()
+        DispatchQueue.main.async {
+            
+            let alert = BalanceStartAlertView(item: item)
+            self.isShouldShow(item: item, alert: alert)
+        }
+    }
+    
 	func showThanksPopup() {
 		DispatchQueue.main.async {
 			if self.isCanShowPopup {

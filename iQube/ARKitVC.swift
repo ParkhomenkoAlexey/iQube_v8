@@ -176,7 +176,8 @@ extension ARKitVC: ARSCNViewDelegate {
             case .Price:
                 showPricePopup(item)
             case .Balance:
-                print("Balance")
+                print("Balance 11")
+                showBalancePopup(item)
             case .Subscribe:
                 apiManager.requestGetSpecialistInfo(specialistID: item.specialistID) { [weak self] (success, specialist) in
                     guard success, let specialist = specialist else {

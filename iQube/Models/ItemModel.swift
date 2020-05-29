@@ -56,6 +56,7 @@ class ItemModel {
     var price: Double?
     var buttonText: String?
     var itemIcon: String?
+    var value: Int?
     
     var specialist: SpecialistModel?
 	
@@ -91,6 +92,7 @@ class ItemModel {
         buttonURL = URL(string: json["button_url"].stringValue)
         buttonText = json["button_text"].stringValue
         itemIcon = json["item_icon"].stringValue
+        value = json["value"].intValue
 	}
 	
 }
