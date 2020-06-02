@@ -57,8 +57,26 @@ class ItemModel {
     var buttonText: String?
     var itemIcon: String?
     var value: Int?
+    var projectId: Int?
+    var workspace_name: String?
+    var project_name: String?
+    var webhook: String?
     
     var specialist: SpecialistModel?
+    
+    var representation: [String: Any] {
+        let rep: [String: Any] = [
+            "workspace_id": specialist?.workspace_id,
+            "workspace_name": workspace_name,
+            "project_id": projectId,
+            "project_name": project_name,
+            "bg_id": bgID,
+            "bg_image_url": imageURL,
+            "subscribe_date_submit": "Еще на стадии разработки"
+
+        ]
+        return rep
+    }
 	
     init() {
     }
@@ -93,6 +111,10 @@ class ItemModel {
         buttonText = json["button_text"].stringValue
         itemIcon = json["item_icon"].stringValue
         value = json["value"].intValue
+        projectId = json["project_id"].intValue
+        workspace_name = json["workspace_name"].stringValue
+        project_name = json["project_name"].stringValue
+        webhook = json["action"].stringValue
 	}
 	
 }

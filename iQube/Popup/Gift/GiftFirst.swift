@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftEntryKit
+import SwiftyJSON
 
 struct GiftModel {
     var userName: String
@@ -37,20 +38,34 @@ class PresentStartAlert: UIView {
 
     @objc func actionButtonPressed() {
         
-        print("item.id: \(item.id)")
-        // не хватает обработчика ошибок
-        apiManager.requestWebHook(userID: UserManager.shared.user.id, markerID: item.id, buttonID: 0)
+        let parameters = ["username": "@kilo_loco", "tweet": "HelloWorld"]
         
-        if let url = item.buttonURL {
-            url.openURL()
-        } else {
-            print("no openUrl")
+        let url = "https://jsonplaceholder.typicode.com/posts"
+        
+        let json = JSON(["name":"Jack", "age": 25])
+        apiManager.postRequest(url: url, item: parameters) { (result) in
+            switch result {
+            case .success(_):
+                print("123")
+            case .failure(let error):
+                print(error)
+            }
         }
         
-        let newView = PresentFinishAlert(item: item)
-        DispatchQueue.main.async {
-            self.transform(to: newView)
-        }
+//        print("item.id: \(item.id)")
+//        // не хватает обработчика ошибок
+//        apiManager.requestWebHook(userID: UserManager.shared.user.id, markerID: item.id, buttonID: 0)
+//
+//        if let url = item.buttonURL {
+//            url.openURL()
+//        } else {
+//            print("no openUrl")
+//        }
+//
+//        let newView = PresentFinishAlert(item: item)
+//        DispatchQueue.main.async {
+//            self.transform(to: newView)
+//        }
     }
 }
 

@@ -56,16 +56,25 @@ class DateEmployeeAlertView: UIView {
 
     @objc func actionButtonFinigh() {
         
-        // не хватает обработчика ошибок
-        print("item.id: \(itemModel.id)")
-        apiManager.requestWebHook(userID: UserManager.shared.user.id, markerID: itemModel.id, buttonID: 0)
+//        let demoItem = ["username": "Alexey", "tweet": "Hello POST"] // можно вставить вместо item
         
-        if let url = itemModel.buttonURL {
-            url.openURL()
-        } else {
-            print("no openUrl")
+        let url = itemModel.webhook // сюда вставлять itemModel.webhook
+//        let url = itemModel.webhook
+        
+        // можете проверить, что получаем
+//        print(itemModel.imageURL)
+//        print(itemModel.projectId)
+        print(itemModel.webhook)
+        apiManager.postRequest(url: url, item: itemModel.representation) { (result) in
+            switch result {
+            case .success(_):
+                print("success!")
+            case .failure(let error):
+                print(error)
+            }
         }
         
+        // позже это перенесется в success
         let newView = EmployeeFinishAlertView(dateRecorded: "23.03.2020", specialistName: "Филимонов Илья")
         DispatchQueue.main.async {
             self.transform(to: newView)

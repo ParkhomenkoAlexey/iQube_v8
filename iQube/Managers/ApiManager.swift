@@ -12,6 +12,30 @@ import KeychainSwift
 
 class ApiManager {
     
+    func postRequest(url: String?, item: [String: Any], completion: @escaping (Result<Data, Error>) -> Void ) {
+        guard let url = URL(string: url ?? "") else { return }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        guard let httpBody = try? JSONSerialization.data(withJSONObject: item, options: []) else { return }
+        request.httpBody = httpBody
+        
+        let session = URLSession.shared
+        session.dataTask(with: request) { (data, response, error) in
+            if let data = data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                    completion(.success(Data()))
+                    print(json)
+                } catch {
+                    completion(.failure(error))
+                }
+            }
+            
+        }.resume()
+    }
+    
     func requestGetWorkspaceList(completion: @escaping ((_ success: Bool, _ projects: [WorkspaceModel]?)->())) {
         guard let url = URL(string: ApiConfig.workspaceList.url) else { return }
         var request = URLRequest(url: url)
@@ -150,9 +174,12 @@ class ApiManager {
             }
             
             let images = jsonData.arrayValue.map {
+                
                 return ImageModel(json: $0)
             }
-            
+            print(images.first?.id)
+            print(images.first?.imageURL)
+            print(images.first?.imageName)
             completion(true, images)
             
         }.resume()

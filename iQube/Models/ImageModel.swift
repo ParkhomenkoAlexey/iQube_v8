@@ -30,6 +30,7 @@ class ImageModel {
 		self.timestamp = json["updated_at_ts"].intValue
 		for itemJSON in json["items"].arrayValue {
 			let item = ItemModel(json: itemJSON)
+//            item.imageURL = imag
 			items.append(item)
 		}
 	}
